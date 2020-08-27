@@ -1,3 +1,6 @@
 # Portfoloweb
+https://jungseri.github.io/web_Portfoloweb/html/portfolio-index.html
 
-<a href="https://jungseri.github.io/web_Portfoloweb/html/html.html">세리의 포트폴리오 사이트입니다!</a>
+# figma share link
+
+https://www.figma.com/file/ojsq4cWv7IQijTUg9QjxSF/photofolo-web?node-id=403%3A128
