@@ -1,5 +1,5 @@
 # Portfoloweb
-https://jungseri.github.io/web_Portfoloweb/html/portfolio-index.html
+https://jungseri.github.io/web_seriportfolio/html/portfolio-index.html
 
 # figma share link
 
