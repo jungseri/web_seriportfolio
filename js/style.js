@@ -14,4 +14,24 @@ $(document).ready(function () {
 
   $(".lightgallery").lightGallery();
 
+  $(".webcon1").click(function () {
+    $(".popup1").show();
+  });
+  $(".close").click(function () {
+    $(".popup1").hide();
+  });
+  $(".webcon2").click(function () {
+    $(".popup2").show();
+  });
+  $(".close").click(function () {
+    $(".popup2").hide();
+  });
+
+  // $(".webtab").mouseenter(function () {
+  //   $(this).css("color", "#222222;");
+  // });
+  // $(".webtab").mouseleave(function () {
+  //   $(this).css("color", "#aaaaaa;");
+  // });
+
 });

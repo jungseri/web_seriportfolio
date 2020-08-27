@@ -31,13 +31,10 @@ form {
 
 /* a링크 선 초기화 */
 a {
-    color: #222;
     text-decoration: none;
 }
 
-a:hover {
-    color: #390;
-}
+a:hover {}
 
 /* 폰트 초기화 */
 body,
@@ -46,11 +43,11 @@ textarea,
 select,
 button,
 table {
-    font-family: 'Roboto', sans-serif, '나눔고딕';
+    /* font-family: 'Roboto', sans-serif, '나눔고딕'; */
     /* font-family: '나눔고딕',Arial, Helvetica, sans-serif,'맑은고딕','돋움'; */
-    color: #222;
-    font-size: 13px;
-    line-height: 1.5;
+    /* color: black; */
+    /* font-size: 13px; */
+    /* line-height: 1.5; */
 }
 
 /*테두리 초기화*/
@@ -62,6 +59,7 @@ fieldset {
 /*버튼초기화*/
 button {
     border: none;
+    background: none;
 }
 
 /*IR기법*/
@@ -109,7 +107,6 @@ menu {
     padding: 0px;
     margin: 0px;
 }
-
 
 
 /*제목태그 초기화(선택)*/

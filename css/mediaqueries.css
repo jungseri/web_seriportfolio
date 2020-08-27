@@ -1,116 +1,96 @@
 /*미디어쿼리*/
 @media(max-width:1600px) {
-    .sec01-wrap {
-        /* display: flex;
-        position: absolute;
-        top: 55%;
-        left: 50%;
-        transform: translate(-50%,-50%);
-        /* margin-top: 60px; */
-        margin: 0 auto;
 
-    }
 
-    .sec03-Dtxtbox {
-        display: flex;
-        padding: 4% 25% 0 25%;
-    }
-
-    .sec03-Wtxtbox {
-        display: flex;
-        padding: 4% 25% 0 25%;
-    }
-}
-
-@media(max-width:1400px) {
-    .sec01-wrap {
-        /* display: flex;
+    @media(max-width:1400px) {
+        .sec01-wrap {
+            /* display: flex;
         position: absolute;
         top: 60%;
         left: 50%;
         transform: translate(-50%,-50%); */
-    }
+        }
 
-
-}
-
-/*화면너비 0~1220px*/
-@media(max-width:1220px) {
-    .container {
-        width: 100%;
-        /* padding-right: 78px; */
 
     }
 
-    .sec01-wrap h1 {
-        /* margin-left: 1%;
+    /*화면너비 0~1220px*/
+    @media(max-width:1220px) {
+        .container {
+            width: 100%;
+            /* padding-right: 78px; */
+
+        }
+
+        .sec01-wrap h1 {
+            /* margin-left: 1%;
         padding-left: 5%; */
+        }
+
+
+
     }
 
 
+    /* 화면 너비 0~960px _태블릿*/
+    @media (max-width:1100px) {
+        .menudots {
+            display: none;
+        }
 
-}
+        .side-sns {
+            display: none;
+        }
 
+        .sec03-Wnum {
+            left: 30%;
+        }
 
-/* 화면 너비 0~960px _태블릿*/
-@media (max-width:1100px) {
-    .menudots {
-        display: none;
-    }
+        .sec03-img ul {
+            display: flex;
+            padding: 50px 10%;
+        }
 
-    .side-sns {
-        display: none;
-    }
+        /*section2*/
+        .sec02-main {
+            background: none;
+        }
 
-    .sec03-Wnum {
-        left: 30%;
-    }
-
-    .sec03-img ul {
-        display: flex;
-        padding: 50px 10%;
-    }
-
-    /*section2*/
-    .sec02-main {
-        background: none;
-    }
-
-    /* .sec02-main {
+        /* .sec02-main {
         padding-top: 50px;
     } */
-    .sec02-intro {
-        padding: 20px;
+        .sec02-intro {
+            padding: 20px;
+        }
+
+        .sec02-intro div h3 {
+            font-size: 23px;
+        }
+
+
     }
 
-    .sec02-intro div h3 {
-        font-size: 23px;
+    /* 화면 너비 0~960px _태블릿*/
+    @media (max-width:960px) {
+        .menudots {
+            display: none;
+        }
+
+        .side-sns {
+            display: none;
+        }
+
+
     }
 
+    /*화면너비 0~768px*/
+    @media(max-width:768px) {}
 
-}
+    /*화면너비 0~600px*/
+    @media(max-width:600px) {}
 
-/* 화면 너비 0~960px _태블릿*/
-@media (max-width:960px) {
-    .menudots {
-        display: none;
-    }
+    /*화면너비 0~480px*/
+    @media(max-width:480px) {}
 
-    .side-sns {
-        display: none;
-    }
-
-
-}
-
-/*화면너비 0~768px*/
-@media(max-width:768px) {}
-
-/*화면너비 0~600px*/
-@media(max-width:600px) {}
-
-/*화면너비 0~480px*/
-@media(max-width:480px) {}
-
-/*화면너비 0~360px*/
-@media(max-width:360px) {}
+    /*화면너비 0~360px*/
+    @media(max-width:360px) {}
