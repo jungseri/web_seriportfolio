@@ -1,0 +1,350 @@
+/* reset */
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Noto Sans KR", "Noto Sans", "Roboto";
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+/*컨테이너*/
+.container {
+  width: 1200px;
+  margin: 0 auto;
+  /* padding: 0 78px; */
+}
+
+/* nav */
+#nav {
+  position: fixed;
+  width: 100%;
+  z-index: 9999;
+  top: 0;
+  left: 0;
+}
+
+.nav-headerbar {
+  background: black;
+  height: 62px;
+}
+
+.nav-headerbar h1 {
+  padding-left: 10px;
+  color: #ffffff;
+  line-height: 62px;
+  font-size: 24px;
+  display: inline-block;
+}
+
+#contents section {
+  height: 100vh;
+}
+
+/*메뉴바*/
+.manubar {
+  width: 50px;
+  height: 50px;
+  display: block;
+  position: absolute;
+  right: 15px;
+  top: 6px;
+  z-index: 9999;
+}
+
+.manubar span {
+  display: block;
+  width: 100%;
+  height: 6px;
+  background: rgba(255, 255, 255, 1);
+  color: transparent;
+  position: absolute;
+  top: 50%;
+  transform: translate(0, -50%);
+  transition: all 0.5s;
+}
+
+.manubar span::after,
+span::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 6px;
+  background: rgba(255, 255, 255, 1);
+  transition: all 0.5s;
+}
+
+.manubar span::after {
+  top: 15px;
+}
+
+.manubar span::before {
+  top: -15px;
+}
+
+.manubar.on1 span {
+  background: rgba(255, 255, 255, 0);
+}
+
+.manubar.on1 span::after {
+  top: 0;
+  transform: rotate(45deg);
+}
+
+.manubar.on1 span::before {
+  top: 0;
+  transform: rotate(-45deg);
+}
+.manubar.on2 span {
+  background: rgba(255, 255, 255, 1);
+}
+
+.manubar.on2 span::after {
+  top: 15px;
+  transform: rotate(0deg);
+}
+
+.manubar.on2 span::before {
+  top: -15px;
+  transform: rotate(0deg);
+}
+
+/*dot*/
+#dot {
+  position: fixed;
+  right: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 900;
+}
+
+#dot li {
+  position: relative;
+  width: 20px;
+  height: 20px;
+  margin: 22px 12px;
+}
+
+#dot li a {
+  position: absolute;
+  left: 0;
+  top: 0;
+  /* border: 2px solid #ffffff; */
+  background: #aaaaaa;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  display: block;
+}
+
+#dot li a::after {
+  content: "";
+  position: absolute;
+  top: -10px;
+  left: 0;
+  width: 100%;
+  height: 40px;
+  background: #aaaaaa;
+  border-radius: 20px;
+  /* box-shadow: 0 0 1px #fff; */
+  /* transform: scale(3); */
+  opacity: 0;
+  visibility: hidden;
+  /* transition:
+opacity 0.3s ease,transform 0.3s ease, visibility 0s 0.3s; */
+}
+
+#dot li.active a::after {
+  opacity: 1;
+  visibility: visible;
+  /* transform: scale(1);
+transition:
+opacity 0.3s ease,transform 0.3s ease; */
+}
+
+#dot li.active {
+}
+
+#dot li.active a {
+}
+
+#dot li a em {
+  display: none;
+}
+
+/*nav-manubar_pop, 웹 표준형 보고 내려오게 디자인 해야함. */
+.nav-manubar_pop {
+  width: 100%;
+  height: 100vh;
+  display: none;
+  background: url(../IMG/manupop-bk.png) repeat-y;
+  background-size: cover;
+  z-index: 9999;
+}
+
+.nav-manubar_pop ul {
+  text-align: center;
+  position: absolute;
+  top: 50%;
+  left: 38%;
+  transform: translate(0, -50%);
+}
+
+.nav-manubar_pop ul li a {
+  color: white;
+  font-size: 80px;
+  font-weight: bold;
+}
+
+.nav-manubar_pop ul li a.manubtn:hover {
+  background: rgba(36, 130, 174, 0.9);
+  transition: box-shadow 0.34s ease, background 0.34s ease;
+  box-shadow: inset 180px 0 0 0 rgba(36, 130, 174, 0.7);
+}
+
+.nav-manubar_pop > ul > li > .snsbar > a {
+  display: inline-block;
+  font-size: 50px;
+  margin-top: 20px;
+}
+
+.snsbar > a > i {
+  padding: 10px;
+  text-align: center;
+}
+
+/*section1*/
+.sec01-bk {
+  width: 100%;
+  height: 100vh;
+  background: white;
+  position: relative;
+}
+
+.sec01-wrap {
+  display: flex;
+  position: absolute;
+  top: 55%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  /* margin-top: 60px; */
+}
+
+.sec01-wrap img {
+  width: 340px;
+  flex: 1;
+}
+
+.sec01-wrap h1 {
+  flex: 1;
+  color: black;
+  font-weight: bold;
+  border-left: solid 10px black;
+  height: 50%;
+
+  margin-top: 9vh;
+  margin-left: 3%;
+  padding-left: 5%;
+  font-size: 80px;
+
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 4;
+}
+
+#section2 {
+  background: radial-gradient(
+    ellipse farthest-corner at center top,
+    #cbf49a,
+    #1ea623
+  );
+}
+
+#section3 {
+  background: radial-gradient(
+    ellipse farthest-corner at center top,
+    #ffee75,
+    #ff8930
+  );
+}
+
+#section4 {
+  background: radial-gradient(
+    ellipse farthest-corner at center bottom,
+    #6beace,
+    #2e9aa4
+  );
+}
+
+#section5 {
+  background: radial-gradient(
+    ellipse farthest-corner at center bottom,
+    #69d2fb 0%,
+    #20438e 100%
+  );
+}
+
+#section6 {
+  background: radial-gradient(
+    ellipse farthest-corner at center top,
+    #6cebcf 0%,
+    #38a7aa 100%
+  );
+}
+
+/*미디어쿼리*/
+@media (max-width: 1600px) {
+  .sec01-wrap {
+    display: flex;
+    position: absolute;
+    top: 55%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    /* margin-top: 60px; */
+    margin: 0 auto;
+  }
+}
+@media (max-width: 1400px) {
+}
+/*화면너비 0~1220px*/
+@media (max-width: 1220px) {
+  .container {
+    width: 100%;
+    padding-right: 78px;
+  }
+  .sec01-wrap h1 {
+    margin-left: 1%;
+    padding-left: 5%;
+  }
+}
+
+/*화면너비 0~1024px*/
+@media (max-width: 1024px) {
+}
+
+/* 화면 너비 0~960px */
+@media (max-width: 960px) {
+}
+
+/*화면너비 0~768px*/
+@media (max-width: 768px) {
+}
+
+/*화면너비 0~600px*/
+@media (max-width: 600px) {
+}
+
+/*화면너비 0~480px*/
+@media (max-width: 480px) {
+}
+
+/*화면너비 0~360px*/
+@media (max-width: 360px) {
+}

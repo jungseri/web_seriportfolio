@@ -1,0 +1,181 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.center-con {
+  /* width: 100%;
+    height: 100vh; */
+  z-index: 9999;
+}
+
+.round {
+  position: absolute;
+  right: 0;
+  top: 0;
+  /* border: 2px solid #fff; */
+  width: 40px;
+  height: 40px;
+  /* border-radius: 100%; */
+  /* transform: scale(3.0); */
+  transform: rotateZ(180deg);
+}
+
+#cta {
+  width: 100%;
+  cursor: pointer;
+  position: absolute;
+}
+
+#cta .arrow {
+  left: 40%;
+}
+
+.arrow {
+  position: absolute;
+  bottom: 0;
+  margin-left: 0px;
+  width: 30px;
+  height: 30px;
+  background-size: contain;
+  top: -5px;
+}
+
+.segunda {
+  margin-left: 20px;
+}
+
+.next {
+  background-image: url(data:image/svg+xml;base64,PHN2ZyBpZD0iTGF5ZXJfMSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB2aWV3Qm94PSIwIDAgNTEyIDUxMiI+PHN0eWxlPi5zdDB7ZmlsbDojZmZmfTwvc3R5bGU+PHBhdGggY2xhc3M9InN0MCIgZD0iTTMxOS4xIDIxN2MyMC4yIDIwLjIgMTkuOSA1My4yLS42IDczLjdzLTUzLjUgMjAuOC03My43LjZsLTE5MC0xOTBjLTIwLjEtMjAuMi0xOS44LTUzLjIuNy03My43UzEwOSA2LjggMTI5LjEgMjdsMTkwIDE5MHoiLz48cGF0aCBjbGFzcz0ic3QwIiBkPSJNMzE5LjEgMjkwLjVjMjAuMi0yMC4yIDE5LjktNTMuMi0uNi03My43cy01My41LTIwLjgtNzMuNy0uNmwtMTkwIDE5MGMtMjAuMiAyMC4yLTE5LjkgNTMuMi42IDczLjdzNTMuNSAyMC44IDczLjcuNmwxOTAtMTkweiIvPjwvc3ZnPg==);
+}
+
+@keyframes bounceAlpha {
+  0% {
+    opacity: 1;
+    transform: translateX(0px) scale(1);
+  }
+
+  25% {
+    opacity: 0;
+    transform: translateX(10px) scale(0.9);
+  }
+
+  26% {
+    opacity: 0;
+    transform: translateX(-10px) scale(0.9);
+  }
+
+  55% {
+    opacity: 1;
+    transform: translateX(0px) scale(1);
+  }
+}
+
+.bounceAlpha {
+  animation-name: bounceAlpha;
+  animation-duration: 1.4s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+
+.arrow.primera.bounceAlpha {
+  animation-name: bounceAlpha;
+  animation-duration: 1.4s;
+  animation-delay: 0.2s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+
+.round:hover .arrow {
+  animation-name: bounceAlpha;
+  animation-duration: 1.4s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+
+.round:hover .arrow.primera {
+  animation-name: bounceAlpha;
+  animation-duration: 1.4s;
+  animation-delay: 0.2s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+
+/*designport*/
+section {
+  width: 100%;
+  height: auto;
+}
+
+.Dtxtbox {
+  width: 100%;
+  height: 100px;
+  font-size: 30px;
+  padding-top: 100px;
+  text-align: center;
+  position: fixed;
+  background: white;
+}
+
+.Dwrap-bk ul {
+  display: flex;
+  margin: 0 2%;
+  text-align: center;
+  padding: 2% 0;
+}
+
+.Dwrap-bk ul:first-child {
+  padding-top: 20%;
+}
+
+.Dwrap-bk ul:last-child {}
+
+.Dwrap-bk img {
+  width: 300px;
+}
+
+.none {
+  display: none;
+}
+
+.empty {
+  background: #eeeeee;
+  width: 300px;
+  height: 211px;
+}
+
+.gray {
+  color: #777777;
+}
+
+input[type="radio"] {
+  display: none;
+}
+
+input[type="radio"]+label {
+  display: inline-block;
+  font-weight: bold;
+  cursor: pointer;
+  /*커서를 바꾸는 속성*/
+  margin: 0 10%;
+}
+
+input[type="radio"]:hover+label {
+  border-bottom: 10px solid black;
+}
+
+input[type="radio"]:checked+label {
+  border-bottom: 10px solid black;
+}
+
+input[id="tab01"]:checked~#section3 {
+  display: block;
+}
+
+input[id="tab02"]:checked~#section2 {
+  display: block;
+}
+
+input[id="tab03"]:checked~#section1 {
+  display: block;
+}
