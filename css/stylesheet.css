@@ -30,7 +30,7 @@ em {
   transform: translate(-50%, -50%);
 }
 
-.title>i {
+.title > i {
   color: #ff005c;
 }
 
@@ -43,18 +43,18 @@ em {
 
 /*컨테이너*/
 
-
 .container {
   width: 1200px;
-  height: calc(100vh - 62px);
+  /* height: calc(100vh - 62px); */
   margin: 0 auto;
-
 }
 
 section {
   width: 100%;
-  height: calc(100vh - 62px);
-  margin-top: 62px;
+  /* height: calc(100vh - 62px);
+  margin-top: 62px; */
+  height: 100vh;
+  padding-top: 62px;
   position: relative;
   background: #ffffff;
 }
@@ -83,6 +83,10 @@ nav {
   text-transform: uppercase;
 }
 
+.header a h1:hover {
+  transition: all 0.5s ease;
+  color: #ffffff;
+}
 
 /*메뉴바*/
 .menubar {
@@ -95,7 +99,7 @@ nav {
   z-index: 999;
 }
 
-.menubar>span {
+.menubar > span {
   display: block;
   width: 100%;
   height: 6px;
@@ -104,11 +108,11 @@ nav {
   position: absolute;
   top: 50%;
   transform: translate(0, -50%);
-  transition: all 0.5s;
+  transition: all 0.5s ease;
 }
 
-.menubar>span::after,
-.menubar>span::before {
+.menubar > span::after,
+.menubar > span::before {
   content: "";
   position: absolute;
   left: 0;
@@ -116,27 +120,27 @@ nav {
   width: 100%;
   height: 6px;
   background: rgba(255, 255, 255, 1);
-  transition: all 0.5s;
+  transition: all 0.5s ease;
 }
 
-.menubar>span::after {
+.menubar > span::after {
   top: 15px;
 }
 
-.menubar>span::before {
+.menubar > span::before {
   top: -15px;
 }
 
-.menubar.on1>span {
+.menubar.on1 > span {
   background: rgba(255, 255, 255, 0);
 }
 
-.menubar.on1>span::after {
+.menubar.on1 > span::after {
   top: 0;
   transform: rotate(45deg);
 }
 
-.menubar.on1>span::before {
+.menubar.on1 > span::before {
   top: 0;
   transform: rotate(-45deg);
 }
@@ -200,20 +204,19 @@ nav {
   transition: ease all 0.5s;
 }
 
-.snsbar {}
+.snsbar {
+}
 
-.snsbar>a {
+.snsbar > a {
   display: inline-block;
   overflow: hidden;
   position: relative;
-
 }
 
-.snsbar>a>i {
+.snsbar > a > i {
   font-size: 50px;
   padding: 10px;
   text-align: center;
-
 }
 
 .snsline {
@@ -225,7 +228,7 @@ nav {
   left: -100px;
 }
 
-.snsbar>a:hover .snsline {
+.snsbar > a:hover .snsline {
   position: absolute;
   top: 55%;
   left: 0;
@@ -284,7 +287,6 @@ nav {
   transition: ease all 0.5s;
 }
 
-
 /*section1*/
 
 .sec01-wrap {
@@ -310,9 +312,10 @@ nav {
 }
 
 /*section2*/
-#section2 {}
+#section2 {
+}
 
-#section2>.container {
+#section2 > .container {
   background: url(../img/sec02-bg.png) no-repeat;
   background-size: cover;
 }
@@ -354,7 +357,6 @@ nav {
 
 .introboximg {
   position: relative;
-
 }
 
 .introboximg div {
@@ -406,9 +408,7 @@ nav {
   width: 50px;
 }
 
-
 /*section3*/
-
 
 .titletab {
   display: flex;
@@ -460,7 +460,6 @@ nav {
   width: 390px;
 }
 
-
 input[type="radio"] {
   display: none;
 }
@@ -473,7 +472,6 @@ input[type="radio"] {
   display: none;
   overflow: hidden;
   position: relative;
-
 }
 
 .webconbox .webcon-img {
@@ -492,19 +490,19 @@ input[type="radio"] {
   z-index: -1;
 }
 
-.webcon1>.webcon-img {
-  background: url(../img/portfoliosite2.png)no-repeat -18px -2px;
+.webcon1 > .webcon-img {
+  background: url(../img/portfoliosite2.png) no-repeat -18px -2px;
   background-size: cover;
 }
 
-.webcon2>.webcon-img {
+.webcon2 > .webcon-img {
   background: #333333;
   /* background-size: cover; */
   overflow: hidden;
   text-align: center;
 }
 
-.webcon2>.webcon-img img {
+.webcon2 > .webcon-img img {
   width: 170px;
   transform: translateY(-7px);
 }
@@ -515,44 +513,58 @@ label[for*="tab"] {
   cursor: pointer;
   font-size: 30px;
   color: #aaa;
-
 }
 
-input[id="webtab01"]:checked~.webcon1 {
+input[id="webtab01"]:checked ~ .webcon1 {
   display: block;
 }
 
-input[id="webtab02"]:checked~.webcon2 {
+input[id="webtab02"]:checked ~ .webcon2 {
   display: block;
 }
 
-input[id="webtab03"]:checked~.webcon3 {
+input[id="webtab03"]:checked ~ .webcon3 {
   display: block;
 }
 
-/* input[id="webtab01"]:hover~.webcon1 {
+input[id="webtab01"]:hover ~ .webcon2,
+.webcon3 {
+  display: none;
+}
+
+input[id="webtab01"]:hover ~ .webcon1 {
   display: block;
 }
 
-input[id="webtab02"]:hover~.webcon2 {
+input[id="webtab02"]:hover ~ .webcon1,
+.webcon3 {
+  display: none;
+}
+
+input[id="webtab02"]:hover ~ .webcon2 {
   display: block;
 }
 
-input[id="webtab03"]:hover~.webcon3 {
+input[id="webtab03"]:hover ~ .webcon1,
+.webcon2 {
+  display: none;
+}
+
+input[id="webtab03"]:hover ~ .webcon3 {
   display: block;
-} */
+}
 
 /*이거 hover시, 기존에 열려있는게 닫혀야하는데.... 어째하지..*/
 
-input[id="webtab01"]:checked~.list-btn>h1>label[for="webtab01"] {
+input[id="webtab01"]:checked ~ .list-btn > h1 > label[for="webtab01"] {
   color: #333333;
 }
 
-input[id="webtab02"]:checked~.list-btn>h1>label[for="webtab02"] {
+input[id="webtab02"]:checked ~ .list-btn > h1 > label[for="webtab02"] {
   color: #333333;
 }
 
-input[id="webtab03"]:checked~.list-btn>h1>label[for="webtab03"] {
+input[id="webtab03"]:checked ~ .list-btn > h1 > label[for="webtab03"] {
   color: #333333;
 }
 
@@ -597,7 +609,6 @@ input[id="webtab03"]:checked~.list-btn>h1>label[for="webtab03"] {
   background-size: cover;
   border: 5px solid black;
   z-index: 10;
-
 }
 
 .popup-content {
@@ -605,7 +616,6 @@ input[id="webtab03"]:checked~.list-btn>h1>label[for="webtab03"] {
   margin-top: 20px;
   z-index: 10;
   padding: 2% 3%;
-
 }
 
 .popupframe {
@@ -653,7 +663,6 @@ input[id="webtab03"]:checked~.list-btn>h1>label[for="webtab03"] {
 
 .popup-btnwrap div {
   margin: 10px 5px;
-
 }
 
 .buttonOverlay {
@@ -661,7 +670,7 @@ input[id="webtab03"]:checked~.list-btn>h1>label[for="webtab03"] {
   text-align: center;
   padding: 12px 24px;
   position: relative;
-  color: #333333
+  color: #333333;
 }
 
 .buttonOverlay span {
@@ -670,25 +679,25 @@ input[id="webtab03"]:checked~.list-btn>h1>label[for="webtab03"] {
 }
 
 .buttonOverlay::before {
-  content: '';
+  content: "";
   position: absolute;
   height: 100%;
   width: 100%;
   top: 5px;
   right: 5px;
   background-color: rgba(0, 0, 0, 0.1);
-  transition: transform .2s ease-in-out;
+  transition: transform 0.2s ease-in-out;
 }
 
 .buttonOverlay::after {
-  content: '';
+  content: "";
   position: absolute;
   top: 0;
   left: 0;
   height: 100%;
   width: 100%;
-  border: 1px solid #474E51;
-  transition: transform .2s ease-in-out;
+  border: 1px solid #474e51;
+  transition: transform 0.2s ease-in-out;
 }
 
 .buttonOverlay:hover::before {
@@ -722,7 +731,7 @@ input[id="webtab03"]:checked~.list-btn>h1>label[for="webtab03"] {
 
 /*section5*/
 #section5 {
-  background: url(../img/menupop-bg.png)no-repeat;
+  background: url(../img/menupop-bg.png) no-repeat;
   background-size: cover;
 }
 
@@ -730,7 +739,7 @@ input[id="webtab03"]:checked~.list-btn>h1>label[for="webtab03"] {
   width: 800px;
 }
 
-.section5>.title {
+.section5 > .title {
   color: #fff;
 }
 
@@ -738,15 +747,14 @@ input[id="webtab03"]:checked~.list-btn>h1>label[for="webtab03"] {
   width: 100%;
   color: #fff;
   text-align: center;
-
 }
 
-.section5>.snsbar {
+.section5 > .snsbar {
   margin: 0 auto;
   text-align: center;
 }
 
-.section5>.snsbar a i {
+.section5 > .snsbar a i {
   color: #fff;
   width: 100%;
   /* height: 20px; */
@@ -785,9 +793,9 @@ input[id="webtab03"]:checked~.list-btn>h1>label[for="webtab03"] {
 #fs-frm label,
 #fs-frm legend,
 #fs-frm ::placeholder {
-  font-size: .825rem;
-  margin-bottom: .5rem;
-  padding-top: .2rem;
+  font-size: 0.825rem;
+  margin-bottom: 0.5rem;
+  padding-top: 0.2rem;
   display: flex;
   align-items: baseline;
 }
@@ -800,8 +808,9 @@ input[id="webtab03"]:checked~.list-btn>h1>label[for="webtab03"] {
   /* border: 1px solid rgba(0, 0, 0, 0.2); */
   border: white 1px solid;
   /* background-color: rgba(255, 255, 255, 0.9); */
-  background: black;
-  padding: .75em 1rem;
+  /* background: black; */
+  color: black;
+  padding: 0.75em 1rem;
   margin-bottom: 1.5rem;
 }
 
@@ -839,6 +848,8 @@ input[id="webtab03"]:checked~.list-btn>h1>label[for="webtab03"] {
 #fs-frm [type="submit"],
 #fs-frm [type="reset"] {
   margin-bottom: 0;
+  margin-left: 358px;
+  padding: 10px 60px;
 }
 
 #fs-frm select {
@@ -851,7 +862,7 @@ input[id="webtab03"]:checked~.list-btn>h1>label[for="webtab03"] {
   appearance: checkbox;
   display: inline-block;
   width: auto;
-  margin: 0 .5em 0 0 !important;
+  margin: 0 0.5em 0 0 !important;
 }
 
 #fs-frm [type="radio"] {
