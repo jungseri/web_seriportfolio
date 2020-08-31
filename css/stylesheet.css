@@ -30,7 +30,7 @@ em {
   transform: translate(-50%, -50%);
 }
 
-.title > i {
+.title>i {
   color: #ff005c;
 }
 
@@ -99,7 +99,7 @@ nav {
   z-index: 999;
 }
 
-.menubar > span {
+.menubar>span {
   display: block;
   width: 100%;
   height: 6px;
@@ -111,8 +111,8 @@ nav {
   transition: all 0.5s ease;
 }
 
-.menubar > span::after,
-.menubar > span::before {
+.menubar>span::after,
+.menubar>span::before {
   content: "";
   position: absolute;
   left: 0;
@@ -123,24 +123,24 @@ nav {
   transition: all 0.5s ease;
 }
 
-.menubar > span::after {
+.menubar>span::after {
   top: 15px;
 }
 
-.menubar > span::before {
+.menubar>span::before {
   top: -15px;
 }
 
-.menubar.on1 > span {
+.menubar.on1>span {
   background: rgba(255, 255, 255, 0);
 }
 
-.menubar.on1 > span::after {
+.menubar.on1>span::after {
   top: 0;
   transform: rotate(45deg);
 }
 
-.menubar.on1 > span::before {
+.menubar.on1>span::before {
   top: 0;
   transform: rotate(-45deg);
 }
@@ -204,16 +204,15 @@ nav {
   transition: ease all 0.5s;
 }
 
-.snsbar {
-}
+.snsbar {}
 
-.snsbar > a {
+.snsbar>a {
   display: inline-block;
   overflow: hidden;
   position: relative;
 }
 
-.snsbar > a > i {
+.snsbar>a>i {
   font-size: 50px;
   padding: 10px;
   text-align: center;
@@ -228,7 +227,7 @@ nav {
   left: -100px;
 }
 
-.snsbar > a:hover .snsline {
+.snsbar>a:hover .snsline {
   position: absolute;
   top: 55%;
   left: 0;
@@ -312,10 +311,9 @@ nav {
 }
 
 /*section2*/
-#section2 {
-}
+#section2 {}
 
-#section2 > .container {
+#section2>.container {
   background: url(../img/sec02-bg.png) no-repeat;
   background-size: cover;
 }
@@ -454,6 +452,7 @@ nav {
 
 .list-btn {
   float: left;
+  padding: 7% 0;
 }
 
 .list-btn h1 {
@@ -490,19 +489,19 @@ input[type="radio"] {
   z-index: -1;
 }
 
-.webcon1 > .webcon-img {
+.webcon1>.webcon-img {
   background: url(../img/portfoliosite2.png) no-repeat -18px -2px;
   background-size: cover;
 }
 
-.webcon2 > .webcon-img {
+.webcon2>.webcon-img {
   background: #333333;
   /* background-size: cover; */
   overflow: hidden;
   text-align: center;
 }
 
-.webcon2 > .webcon-img img {
+.webcon2>.webcon-img img {
   width: 170px;
   transform: translateY(-7px);
 }
@@ -515,56 +514,56 @@ label[for*="tab"] {
   color: #aaa;
 }
 
-input[id="webtab01"]:checked ~ .webcon1 {
+input[id="webtab01"]:checked~.webcon1 {
   display: block;
 }
 
-input[id="webtab02"]:checked ~ .webcon2 {
+input[id="webtab02"]:checked~.webcon2 {
   display: block;
 }
 
-input[id="webtab03"]:checked ~ .webcon3 {
+input[id="webtab03"]:checked~.webcon3 {
   display: block;
 }
 
-input[id="webtab01"]:hover ~ .webcon2,
+input[id="webtab01"]:hover~.webcon2,
 .webcon3 {
   display: none;
 }
 
-input[id="webtab01"]:hover ~ .webcon1 {
+input[id="webtab01"]:hover~.webcon1 {
   display: block;
 }
 
-input[id="webtab02"]:hover ~ .webcon1,
+input[id="webtab02"]:hover~.webcon1,
 .webcon3 {
   display: none;
 }
 
-input[id="webtab02"]:hover ~ .webcon2 {
+input[id="webtab02"]:hover~.webcon2 {
   display: block;
 }
 
-input[id="webtab03"]:hover ~ .webcon1,
+input[id="webtab03"]:hover~.webcon1,
 .webcon2 {
   display: none;
 }
 
-input[id="webtab03"]:hover ~ .webcon3 {
+input[id="webtab03"]:hover~.webcon3 {
   display: block;
 }
 
 /*이거 hover시, 기존에 열려있는게 닫혀야하는데.... 어째하지..*/
 
-input[id="webtab01"]:checked ~ .list-btn > h1 > label[for="webtab01"] {
+input[id="webtab01"]:checked~.list-btn>h1>label[for="webtab01"] {
   color: #333333;
 }
 
-input[id="webtab02"]:checked ~ .list-btn > h1 > label[for="webtab02"] {
+input[id="webtab02"]:checked~.list-btn>h1>label[for="webtab02"] {
   color: #333333;
 }
 
-input[id="webtab03"]:checked ~ .list-btn > h1 > label[for="webtab03"] {
+input[id="webtab03"]:checked~.list-btn>h1>label[for="webtab03"] {
   color: #333333;
 }
 
@@ -739,7 +738,7 @@ input[id="webtab03"]:checked ~ .list-btn > h1 > label[for="webtab03"] {
   width: 800px;
 }
 
-.section5 > .title {
+.section5>.title {
   color: #fff;
 }
 
@@ -749,12 +748,12 @@ input[id="webtab03"]:checked ~ .list-btn > h1 > label[for="webtab03"] {
   text-align: center;
 }
 
-.section5 > .snsbar {
+.section5>.snsbar {
   margin: 0 auto;
   text-align: center;
 }
 
-.section5 > .snsbar a i {
+.section5>.snsbar a i {
   color: #fff;
   width: 100%;
   /* height: 20px; */
