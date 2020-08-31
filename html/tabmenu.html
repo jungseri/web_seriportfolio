@@ -67,25 +67,7 @@
         }
 
 
-        .checkbox {
-            width: 10px;
-            height: 10px;
-            border: 1px solid #aaa;
-            border-radius: 3px;
-            display: inline-block;
-            position: relative;
 
-        }
-
-        .check {
-            width: 25px;
-            height: 15px;
-            background: url(../img/check.png);
-            background-size: cover;
-            position: absolute;
-            top: 0;
-            left: 0;
-        }
 
         .design-conbox {}
 
@@ -113,11 +95,32 @@
             left: 5px;
         }
 
+        .checkbox {
+            width: 10px;
+            height: 10px;
+            border: 1px solid #aaa;
+            border-radius: 3px;
+            display: inline-block;
+
+        }
+
+        .check {
+            width: 25px;
+            height: 15px;
+            background: url(../img/check.png);
+            background-size: cover;
+            position: absolute;
+            top: -3px;
+            left: -23px;
+            display: none;
+        }
+
         label[for*="tab"] div {
             display: inline-block;
             cursor: pointer;
             border-radius: 2px;
-            /* border: 2px solid #ccc; */
+            position: relative;
+
         }
 
         input[id="design-tab01"]:checked~.design-con1 {
@@ -128,21 +131,15 @@
             display: block;
         }
 
-        input[id="design-tab03"]:checked~.design-con3 {
+        /* 
+        input[id="design-tab01"]:checked~.design-btn>.design-tab01>.check[for="design-tab01"] {
             display: block;
         }
 
-        input[id="design-tab01"]:checked~.design-btn>h1>label[for="design-tab01"] {
-            color: #333333;
-        }
+        input[id="design-tab02"]:checked~.design-btn>.design-tab02>.check[for="design-tab02"] {
+            display: block;
+        } */
 
-        input[id="design-tab02"]:checked~.design-btn>h1>label[for="design-tab02"] {
-            color: #333333;
-        }
-
-        input[id="design-tab03"]:checked~.design-btn>h1>label[for="design-tab03"] {
-            color: #333333;
-        }
 
         .design-conbox {
             width: 100%;
