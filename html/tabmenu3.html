@@ -1,19 +1,158 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-  </head>
 
-  <body>
-    <h2>주제</h2>
-    <ul>
-      <li><a href="#div1"></a></li>
-      <li><a href="#div2"></a></li>
-      <li><a href="#div3"></a></li>
-      <li><a href="#div4"></a></li>
-      <li><a href="#div5"></a></li>
-    </ul>
-  </body>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      width: 400px;
+    }
+
+    h2 {
+      padding: 0;
+      margin: 0;
+      text-align: center;
+    }
+
+    .tabs-nav {
+      display: flex;
+      list-style: none;
+      padding: 20px 0;
+      margin: 0;
+      width: 400px;
+    }
+
+    .tabs-nav li {
+      position: relative;
+    }
+
+    .tabs-nav li a {
+      color: black;
+      margin: 0 10px;
+      padding-bottom: 5px;
+      text-decoration: none;
+      line-height: 10px;
+
+    }
+
+    .active {
+      font-weight: bold;
+    }
+
+
+    .tabs-nav li a.active span.on {
+      position: absolute;
+      width: 65%;
+      height: 10px;
+      background: rgba(0, 255, 209, 0.69);
+      z-index: -1;
+      left: 12px;
+      top: 10px;
+      /* 애니메이션 이름 */
+      animation-name: line;
+      animation-duration: 0.5s;
+    }
+
+
+    /* 키프레임 이름 = 애니메이션 이름 */
+    @-webkit-keyframes line {
+      0% {
+        width: 0%;
+      }
+
+      100% {
+        width: 65%;
+      }
+    }
+
+    .section-body section.active2 {
+      display: block;
+    }
+
+    .tab-panel {
+      width: 400px;
+      height: 400px;
+    }
+
+    #work01 {
+      background: red;
+
+    }
+
+    #work02 {
+      background: yellow;
+    }
+
+    #work03 {
+      background: green;
+
+    }
+
+    #work04 {
+      background: blue;
+
+    }
+
+    #work05 {
+      background: purple;
+
+    }
+  </style>
+</head>
+
+<body>
+  <h2>주제</h2>
+  <ul class="tabs-nav">
+    <li><a href="#work01" class="active"><span class="on"></span>work01</a></li>
+    <li><a href="#work02"><span class="on"></span>work02</a></li>
+    <li><a href="#work03"><span class="on"></span>work03</a></li>
+    <li><a href="#work04"><span class="on"></span>work04</a></li>
+    <li><a href="#work05"><span class="on"></span>work05</a></li>
+  </ul>
+
+  <div class="section-body">
+    <section class="tab-panel" id="work01">workpanel1</section>
+    <section class="tab-panel" id="work02">workpanel2</section>
+    <section class="tab-panel" id="work03">workpanel3</section>
+    <section class="tab-panel" id="work04">workpanel4</section>
+    <section class="tab-panel" id="work05">workpanel5</section>
+  </div>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+  <script>
+    //링크를 클릭하면 할일
+    var tabAnchor = $(".tabs-nav li a"),
+      tabpanel = $(".tab-panel")
+
+    tabpanel.hide();
+    $("#work01").show();
+
+    tabAnchor.click(function (e) {
+      e.preventDefault();
+      //a링크에 연결한거는 링크에 보이게 하기 위해서지, 기능을 쓰기 위한것이 아님.
+      //1. 내가 클릭한 그 요소에만 active를 추가하고, 나머지 요소에는 빼는 방법
+      tabAnchor.removeClass("active"); // 모두 빼고
+      $(this).addClass("active"); //그 요소만 추가 
+      // $(this).css('left', '20px');
+      //2.얘 말고 나머지는 형제 클래스로 쓰는 방법도 있음.
+
+      // $(this).addClass('active').siblings().removeClass('active');
+      //중복 클릭은(추가는) 되는데, removeclass가 안됨(빠지지가 않음).
+
+      //this가 클릭당한 그친구, 이렇게도 쓸 수는 있지만, a는 형제 자매가 없어서
+      // 형제 태그(siblings)를 못씀. 각각의 a는 li 안에 들어있기 때문에
+      // 형제태그(siblings)를 쓸거면 li를 변수로 잡아야함.
+
+      tabpanel.hide();
+      var $target = $(this).attr('href');
+      console.log($target);
+      $($target).show();
+
+    });
+  </script>
+</body>
+
 </html>
