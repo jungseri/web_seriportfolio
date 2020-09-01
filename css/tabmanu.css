@@ -1,0 +1,194 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+*:focus {
+    outline: none;
+}
+
+/*버튼 커서 없애기*/
+section {
+    width: 100%;
+    height: 100vh;
+    position: relative;
+}
+
+.title {
+    display: inline;
+}
+
+.wrap {
+    width: 80%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/*탭메뉴*/
+
+.tabbtn {
+    display: flex;
+}
+
+.tabbtn div {}
+
+.tabbtn div {
+    padding: 10px;
+    text-decoration: none;
+    display: flex;
+    color: #aaaaaa;
+    line-height: 10px;
+}
+
+.productD-btn:hover h3,
+.visualD-btn:hover h3 {
+    transform: scale(1.05);
+    color: black;
+}
+
+.on1 {
+    width: 100%;
+    height: 10px;
+    background: rgba(250, 255, 2, 0.4);
+    line-height: 10px;
+    color: black;
+}
+
+.checkbox {
+    width: 10px;
+    height: 10px;
+    border: 1px solid #aaa;
+    border-radius: 3px;
+    display: inline-block;
+    position: relative;
+}
+
+.check {
+    width: 25px;
+    height: 15px;
+    background: url(../img/check.png);
+    background-size: cover;
+    position: absolute;
+    top: -6px;
+    left: -5px;
+
+    /* display: none; */
+}
+
+/*슬라이드*/
+#productD-slide {
+    background: blue;
+}
+
+#visualD-slide {
+    background: blueviolet;
+}
+
+.tabs-panel div a img {
+    width: 300px;
+}
+
+.tabs-panel {
+    display: flex;
+}
+
+.design-conbox {}
+
+input[type="radio"] {
+    display: none;
+}
+
+.design-conbox {
+    width: 500px;
+    height: 500px;
+    background: #aaa;
+    display: none;
+    position: relative;
+}
+
+.design-btn {
+    padding: 10px;
+    text-align: left;
+    color: #aaa;
+}
+
+input[id="design-tab01"]:checked {
+    /* position: absolute;
+    top: 10px;
+    left: 5px; */
+    color: red;
+}
+
+label[for*="tab"] div {
+    display: inline-block;
+    cursor: pointer;
+    border-radius: 2px;
+    position: relative;
+}
+
+input[id="design-tab01"]:checked~.design-con1 {
+    display: block;
+    color: red;
+}
+
+input[id="design-tab02"]:checked~.design-con2 {
+    display: block;
+}
+
+/* 
+input[id="design-tab01"]:checked~.design-btn>.design-tab01>.check[for="design-tab01"] {
+    display: block;
+}
+
+input[id="design-tab02"]:checked~.design-btn>.design-tab02>.check[for="design-tab02"] {
+    display: block;
+} */
+
+.design-conbox {
+    width: 100%;
+}
+
+.con1wrap div {
+    width: 400px;
+    height: 600px;
+    padding: 0 50px;
+}
+
+button {
+    width: 38px;
+    height: 20px;
+    /* background: green; */
+}
+
+.slick-prev {
+    background: url(../img/arrowright.png) no-repeat;
+    border: none;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    text-indent: -9999px;
+}
+
+.slick-next {
+    background: url(../img/arrowright.png) no-repeat;
+    border: none;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    text-indent: -9999px;
+    transform: rotate(0deg);
+
+    -moz-transform: scaleX(-1);
+
+    -o-transform: scaleX(-1);
+
+    -webkit-transform: scaleX(-1);
+
+    transform: scaleX(-1);
+
+    filter: FlipH;
+
+    -ms-filter: "FlipH";
+}

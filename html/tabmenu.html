@@ -11,7 +11,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.css" />
     <link rel="stylesheet" href="../css/lightgallery.css">
     <link rel="stylesheet" href="../css/slick.css">
-
+    <link rel="stylesheet" href="../css/tabmanu.css">
     <!--javascript-->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
     <script src="../js/lightgallery.js"></script>
@@ -20,177 +20,7 @@
     <script src="../js/style.js"></script>
 
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-        }
 
-        *:focus {
-            outline: none;
-        }
-
-        /*버튼 커서 없애기*/
-        section {
-            width: 100%;
-            height: 100vh;
-            position: relative;
-        }
-
-        .title {
-            display: inline;
-        }
-
-        .wrap {
-            width: 80%;
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-        }
-
-        .tabtitle {
-            display: flex;
-        }
-
-        .tabtitle a h3 {
-            font-size: 36px;
-            text-align: center;
-        }
-
-        .design-btn {
-            width: 300px;
-        }
-
-        .design-tab01 {
-            /* display: flex; */
-
-        }
-
-
-
-
-        .design-conbox {}
-
-        input[type="radio"] {
-            display: none;
-        }
-
-        .design-conbox {
-            width: 500px;
-            height: 500px;
-            background: #aaa;
-            display: none;
-            position: relative;
-        }
-
-        .design-btn {
-            padding: 10px;
-            text-align: left;
-            color: #aaa;
-        }
-
-        input[id="design-tab01"]:checked {
-            position: absolute;
-            top: 10px;
-            left: 5px;
-        }
-
-        .checkbox {
-            width: 10px;
-            height: 10px;
-            border: 1px solid #aaa;
-            border-radius: 3px;
-            display: inline-block;
-
-        }
-
-        .check {
-            width: 25px;
-            height: 15px;
-            background: url(../img/check.png);
-            background-size: cover;
-            position: absolute;
-            top: -3px;
-            left: -23px;
-            display: none;
-        }
-
-        label[for*="tab"] div {
-            display: inline-block;
-            cursor: pointer;
-            border-radius: 2px;
-            position: relative;
-
-        }
-
-        input[id="design-tab01"]:checked~.design-con1 {
-            display: block;
-        }
-
-        input[id="design-tab02"]:checked~.design-con2 {
-            display: block;
-        }
-
-        /* 
-        input[id="design-tab01"]:checked~.design-btn>.design-tab01>.check[for="design-tab01"] {
-            display: block;
-        }
-
-        input[id="design-tab02"]:checked~.design-btn>.design-tab02>.check[for="design-tab02"] {
-            display: block;
-        } */
-
-
-        .design-conbox {
-            width: 100%;
-        }
-
-        .con1wrap div {
-            width: 400px;
-            height: 600px;
-            padding: 0 10px;
-        }
-
-        button {
-            width: 38px;
-            height: 20px;
-            /* background: green; */
-        }
-
-        .slick-prev {
-            background: url(../img/arrowright.png) no-repeat;
-            border: none;
-            position: absolute;
-            right: 0;
-            bottom: 0;
-            text-indent: -9999px;
-        }
-
-        .slick-next {
-            background: url(../img/arrowright.png) no-repeat;
-            border: none;
-            position: absolute;
-            left: 0;
-            bottom: 0;
-            text-indent: -9999px;
-            transform: rotate(0deg);
-
-            -moz-transform: scaleX(-1);
-
-            -o-transform: scaleX(-1);
-
-            -webkit-transform: scaleX(-1);
-
-            transform: scaleX(-1);
-
-            filter: FlipH;
-
-            -ms-filter: "FlipH";
-        }
-
-        .con1wrap img {
-            width: 400px;
-        }
     </style>
 </head>
 
@@ -203,61 +33,117 @@
                 <input type="radio" name="tabmenu" id="design-tab02">
                 <input type="radio" name="tabmenu" id="design-tab03">
 
-                <div class="design-btn">
-                    <label for="design-tab01">
-                        <div class="checkbox"></div>
-                        <div class="check"></div>
-                        Only Product
-                    </label>
-                    <label for="design-tab02">
-                        <div class="checkbox"></div>
-                        <div class="check"></div>
-                        Only Visual
-                    </label>
-                </div>
-                <div class="design-conbox design-con1">
-                    <div class="con1wrap">
-                        <div class="lightgallery">
-                            <a href="../img/Portfolo-P (1).png">
-                                <img src="../img/Portfolo-P (1).png" alt="Product Desgin" />
-                                <figcaption>[컨셉디자인] 공기청정기</figcaption>
-                            </a>
-                        </div>
-                        <div class="lightgallery">
-                            <a href="../img/Portfolo-P (1).png">
-                                <img src="../img/Portfolo-P (1).png" alt="Product Desgin" />
-                                <figcaption>[컨셉디자인] 공기청정기</figcaption>
-                            </a>
-                        </div>
-                        <div class="lightgallery">
-                            <a href="../img/Portfolo-P (1).png">
-                                <img src="../img/Portfolo-P (1).png" alt="Product Desgin" />
-                                <figcaption>[컨셉디자인] 공기청정기</figcaption>
-                            </a>
-                            <a href="../img/Portfolo-P (1).png">
-                                <img src="../img/Portfolo-P (1).png" alt="Product Desgin" />
-                                <figcaption>[컨셉디자인] 공기청정기</figcaption>
-                            </a>
-                        </div>
-                        <div class="lightgallery">
-                            <a href="../img/Portfolo-P (1).png">
-                                <img src="../img/Portfolo-P (1).png" alt="Product Desgin" />
-                                <figcaption>[컨셉디자인] 공기청정기</figcaption>
-                            </a>
-                        </div>
+                <div class="tabbtn">
+                    <div class="productD-btn">
+                        <h3><span class="checkbox"><span class=""></span></span>
 
+                            Only Product
+                        </h3>
+
+                    </div>
+                    <div class="visualD-btn">
+                        <h3><span class="checkbox"><span class=""></span></span>
+
+                            Only Visual
+                        </h3>
 
                     </div>
                 </div>
-                <div class="design-conbox design-con2">제목2의 이미지</div>
-                <div class="design-conbox design-con3">제목3의 이미지</div>
+                <!-- content -->
+                <div class="tabs-panel" id="productD-slide">
+
+                    <div class="lightgallery design-tab01">
+                        <a href="../img/Portfolo-P (1).png">
+                            <img src="../img/Portfolo-P (1).png" alt="Product Desgin" />
+                            <figcaption>[컨셉디자인] 공기청정기</figcaption>
+                        </a>
+                        <a href="../img/Portfolo-P (2).png">
+                            <img src="../img/Portfolo-P (2).png" alt="Product Desgin" />
+                            <figcaption>[컨셉디자인] 공기청정기</figcaption>
+                        </a>
+                    </div>
+                    <div class="lightgallery design-tab02">
+                        <a href="../img/Portfolo-P (3).png">
+                            <img src="../img/Portfolo-P (3).png" alt="Product Desgin" />
+                            <figcaption>[컨셉디자인] 공기청정기</figcaption>
+                        </a>
+                        <a href="../img/Portfolo-P (4).png">
+                            <img src="../img/Portfolo-P (4).png" alt="Product Desgin" />
+                            <figcaption>[컨셉디자인] 공기청정기</figcaption>
+                        </a>
+                    </div>
+                    <div class="lightgallery design-tab03">
+                        <a href="../img/Portfolo-P (5).png">
+                            <img src="../img/Portfolo-P (5).png" alt="Product Desgin" />
+                            <figcaption>[컨셉디자인] 공기청정기</figcaption>
+                        </a>
+                        <a href="../img/Portfolo-P (6).png">
+                            <img src="../img/Portfolo-P (6).png" alt="Product Desgin" />
+                            <figcaption>[컨셉디자인] 공기청정기</figcaption>
+                        </a>
+                    </div>
+
+                </div>
+                <div class="tabs-panel" id="visualD-slide">
+                    <div class="lightgallery">
+                        <a href="../img/Portfolo-P (7).png">
+                            <img src="../img/Portfolo-P (7).png" alt="Product Desgin" />
+                            <figcaption>[컨셉디자인] 공기청정기</figcaption>
+                        </a>
+                        <a href="../img/Portfolo-P (8).png">
+                            <img src="../img/Portfolo-P (8).png" alt="Product Desgin" />
+                            <figcaption>[컨셉디자인] 공기청정기</figcaption>
+                        </a>
+                    </div>
+                    <div class="lightgallery">
+                        <a href="../img/Portfolo-P (9).png">
+                            <img src="../img/Portfolo-P (9).png" alt="Product Desgin" />
+                            <figcaption>[컨셉디자인] 공기청정기</figcaption>
+                        </a>
+                        <a href="../img/Portfolo-P (10).png">
+                            <img src="../img/Portfolo-P (10).png" alt="Product Desgin" />
+                            <figcaption>[컨셉디자인] 공기청정기</figcaption>
+                        </a>
+                    </div>
+                    <div class="lightgallery">
+                        <a href="../img/Portfolo-P (11).png">
+                            <img src="../img/Portfolo-P (11).png" alt="Product Desgin" />
+                            <figcaption>[컨셉디자인] 공기청정기</figcaption>
+                        </a>
+                        <a href="../img/Portfolo-P (12).png">
+                            <img src="../img/Portfolo-P (12).png" alt="Product Desgin" />
+                            <figcaption>[컨셉디자인] 공기청정기</figcaption>
+                        </a>
+                    </div>
+                </div>
 
             </div>
         </div>
         </div>
     </section>
     <script>
-        $('.con1wrap').slick({
+        // $(".productD-btn").click(function () {
+        //     $(".productD-btn>h3>.checkbox>span").toggleClass("check");
+        //     $(".productD-btn>h3").toggleClass("on1");
+        // });
+
+        // $(".visualD-btn").click(function () {
+        //     $(".visualD-btn>h3>.checkbox>span").toggleClass("check");
+        //     $(".visualD-btn>h3").toggleClass("on1");
+
+        // });
+        $('#productD-slide').slick({
+            autoplay: true,
+            dots: false,
+            // arrow: false,
+            infinite: true,
+            speed: 300,
+            slidesToShow: 1,
+            centerMode: true,
+            variableWidth: true,
+
+        });
+        $('#visualD-slide').slick({
             autoplay: true,
             dots: false,
             // arrow: false,

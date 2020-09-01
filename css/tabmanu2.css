@@ -1,0 +1,133 @@
+/*reset*/
+h3 {
+    margin: 0;
+    padding: 0;
+}
+
+
+button {
+    width: 38px;
+    height: 20px;
+    /* background: green; */
+}
+
+.tabs-panel {
+    display: flex;
+}
+
+#productD-slide {
+    background: blue;
+}
+
+#visualD-slide {
+    background: blueviolet;
+}
+
+.slick-prev {
+    background: url(../img/arrowright.png) no-repeat;
+    border: none;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    text-indent: -9999px;
+}
+
+.slick-next {
+    background: url(../img/arrowright.png) no-repeat;
+    border: none;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    text-indent: -9999px;
+    transform: rotate(0deg);
+
+    -moz-transform: scaleX(-1);
+
+    -o-transform: scaleX(-1);
+
+    -webkit-transform: scaleX(-1);
+
+    transform: scaleX(-1);
+
+    filter: FlipH;
+
+    -ms-filter: "FlipH";
+}
+
+.tabs-panel img {
+    width: 400px;
+}
+
+/*탭메뉴*/
+
+
+.tabbtn {
+    display: flex;
+
+}
+
+.tabbtn div {}
+
+.tabbtn div a {
+    padding: 10px 0;
+    padding-right: 10px;
+    text-decoration: none;
+    display: flex;
+    color: #aaaaaa;
+    line-height: 10px;
+}
+
+.tabbtn div a span {
+    margin-right: 10px;
+}
+
+.productD-btn:hover a h3,
+.visualD-btn:hover a h3 {
+    transform: scale(1.05);
+    color: black;
+}
+
+.on1 {
+    width: 100%;
+    height: 10px;
+    background: rgba(250, 255, 2, 0.4);
+    /* background-size: 100px; */
+    line-height: 10px;
+    /* color: #FF005C; */
+    color: black;
+
+}
+
+.checkbox {
+    width: 10px;
+    height: 10px;
+    border: 1px solid #aaa;
+    border-radius: 3px;
+    display: inline-block;
+    position: relative;
+}
+
+.check {
+    width: 25px;
+    height: 15px;
+    background: url(../img/check.png);
+    background-size: cover;
+    position: absolute;
+    top: -7px;
+    left: -6px;
+    /* display: none; */
+}
+
+
+
+/* 
+.productD-btn:hover h3 .checkbox>span,
+.visualD-btn:hover h3 .checkbox>span {
+    width: 25px;
+    height: 15px;
+    background: url(../img/check.png);
+    background-size: cover;
+    position: absolute;
+    top: -7px;
+    left: -6px;
+} */
