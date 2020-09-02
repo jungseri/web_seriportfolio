@@ -1,4 +1,5 @@
 $(document).ready(function () {
+  /*메뉴바*/
   $(".menubar").click(function (e) {
     e.preventDefault();
     $(".menubar").toggleClass("on1");
@@ -12,8 +13,7 @@ $(document).ready(function () {
   });
 
 
-  $(".lightgallery").lightGallery();
-
+  /*팝업*/
   $(".webcon1").click(function () {
     $(".popup1").show();
   });
@@ -26,12 +26,44 @@ $(document).ready(function () {
   $(".close").click(function () {
     $(".popup2").hide();
   });
+  /*슬라이드*/
+  $(".lightgallery").lightGallery();
 
-  // $(".webtab").mouseenter(function () {
-  //   $(this).css("color", "#222222;");
-  // });
-  // $(".webtab").mouseleave(function () {
-  //   $(this).css("color", "#aaaaaa;");
-  // });
+  const config = {
+    type: 'carousel',
+    // startAt: 0,
+    perView: 3,
+    autoplay: 1000,
+    breakpoints: {
+      1024: {
+        perView: 2
+      },
+      600: {
+        perView: 1
+      }
+    }
+  }
 
+  new Glide('.slide1', config).mount();
+
+  new Glide('.slide2', config).mount();
+  /*탭버튼*/
+  var tabAnchor = $(".tabs-nav li a"),
+    tabpanel = $(".glide__slides")
+
+  tabpanel.hide();
+  $("#productD-slide").show();
+
+  tabAnchor.click(function (e) {
+    e.preventDefault();
+
+    tabAnchor.removeClass("active");
+    $(this).addClass("active");
+
+    tabpanel.hide();
+    var $target = $(this).attr('href');
+    console.log($target);
+    $($target).show();
+
+  });
 });

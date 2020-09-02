@@ -9,7 +9,7 @@
     <!--css-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.css" />
     <link rel="stylesheet" href="../css/lightgallery.css">
-    <link rel="stylesheet" href="../css/slick.css">
+    <link rel="stylesheet" href="../css/glide.core.min.css">
     <link rel="stylesheet" href="../css/reset.css">
     <link rel="stylesheet" href="../css/stylesheet.css">
     <link rel="stylesheet" href="../css/mediaqueries.css">
@@ -35,7 +35,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
     <script src="../js/lightgallery.js"></script>
     <script src="../js/lightgallery-all.min.js"></script>
-    <script src="../js/slick.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@glidejs/glide"></script>
     <script src="../js/style.js"></script>
 
     <!--기본formjs-->
@@ -358,12 +358,11 @@
             <div class="container">
                 <h2 class="ir_su">포트폴리오</h2>
                 <div class="wrap">
-                    <h1 class="title mt45"><i class="xi-check"></i>portfolio</h1>
+                    <h1 class="title"><i class="xi-check"></i>portfolio</h1>
                     <div class="sec04-titletab titletab">
                         <a href="#section3" class="titletab1">
                             <!-- <div></div> -->
                             <h3>web Publishing<span class="line1"></span></h3>
-
                         </a>
                         <a href="#section4" class="titletab2">
                             <!-- <div></div> -->
@@ -371,7 +370,219 @@
                         </a>
                     </div>
 
+                    <ul class="tabs-nav">
+                        <li><a href="#productD-slide" class="active">
+                                <h3 class=""><span class="checkbox"><span class="check"></span></span>
+                                    Only Product<span class="on1"></span>
+                                </h3>
+                            </a></li>
+                        <li><a href="#visualD-slide">
+                                <h3 class=""><span class="checkbox"><span class="check"></span></span>
+                                    Only Visual <span class="on1"></span>
+                                </h3>
+                            </a></li>
+                    </ul>
 
+                    <!-- slide-wrap -->
+                    <div class="slide-wrap">
+                        <div class="glide slide1">
+                            <div class="glide__track" data-glide-el="track">
+                                <ul class="glide__slides" id="productD-slide">
+                                    <li class="tabwrap">
+                                        <div class="lightgallery design-tab01">
+                                            <a href="../img/product1-1.svg">
+                                                <img src="../img/product1-1.svg" alt="Product Desgin" />
+                                                <figcaption>[컨셉디자인] 공기청정기</figcaption>
+                                            </a>
+                                            <a href="../img/product1-2.svg">
+                                                <img src="../img/product1-2.svg" style="display: none;"
+                                                    alt="Product Desgin" />
+                                            </a>
+                                            <a href="../img/product1-3.svg">
+                                                <img src="../img/product1-3.svg" style="display: none;"
+                                                    alt="Product Desgin" />
+                                            </a>
+                                            <a href="../img/product1-4.svg">
+                                                <img src="../img/product1-4.svg" style="display: none;"
+                                                    alt="Product Desgin" />
+                                            </a>
+                                            <a href="../img/product1-5.svg">
+                                                <img src="../img/product1-5.svg" style="display: none;"
+                                                    alt="Product Desgin" />
+                                            </a>
+                                        </div>
+                                        <div class="lightgallery design-tab02">
+                                            <a href="../img/product2-1.svg">
+                                                <img src="../img/product2-1.svg" alt="Product Desgin" />
+                                                <figcaption>[컨셉디자인] 커피머신</figcaption>
+                                            </a>
+                                            <a href="../img/product2-2.svg">
+                                                <img src="../img/product2-2.svg" style="display: none;"
+                                                    alt="Product Desgin" />
+                                            </a>
+                                            <a href="../img/product2-3.svg">
+                                                <img src="../img/product2-3.svg" style="display: none;"
+                                                    alt="Product Desgin" />
+                                            </a>
+                                            <a href="../img/product2-4.svg">
+                                                <img src="../img/product2-4.svg" style="display: none;"
+                                                    alt="Product Desgin" />
+                                            </a>
+                                            <a href="../img/product2-5.svg">
+                                                <img src="../img/product2-5.svg" style="display: none;"
+                                                    alt="Product Desgin" />
+                                            </a>
+                                            <a href="../img/product2-6.svg">
+                                                <img src="../img/product2-6.svg" style="display: none;"
+                                                    alt="Product Desgin" />
+                                            </a>
+                                        </div>
+                                    </li>
+                                    <li class="tabwrap">
+                                        <div class="lightgallery design-tab03">
+                                            <a href="../img/product3-1.svg">
+                                                <img src="../img/product3-1.svg" alt=" Product Desgin" />
+                                                <figcaption>[컨셉디자인] 빔프로젝트</figcaption>
+                                            </a>
+                                            <a href="../img/product3-2.svg">
+                                                <img src="../img/product3-2.svg" style="display: none;"
+                                                    alt="Product Desgin" />
+                                            </a>
+                                            <a href="../img/product3-3.svg">
+                                                <img src="../img/product3-3.svg" style="display: none;"
+                                                    alt="Product Desgin" />
+                                            </a>
+                                            <a href="../img/product3-4.svg">
+                                                <img src="../img/product3-4.svg" style="display: none;"
+                                                    alt="Product Desgin" />
+                                            </a>
+                                        </div>
+
+                                        <div class="lightgallery design-tab04">
+                                            <a href="../img/product4-1.svg">
+                                                <img src="../img/product4-1.svg" alt="Product Desgin" />
+                                                <figcaption>[회사프로젝트] 태국향정수기</figcaption>
+                                            </a>
+                                            <a href="../img/product4-3.svg">
+                                                <img src="../img/product4-3.svg" style="display: none;"
+                                                    alt="Product Desgin" />
+                                            </a>
+                                            <a href="../img/product4-3.svg">
+                                                <img src="../img/product4-3.svg" style="display: none;"
+                                                    alt="Product Desgin" />
+                                            </a>
+                                            <a href="../img/product4-4.svg">
+                                                <img src="../img/product4-4.svg" style="display: none;"
+                                                    alt="Product Desgin" />
+                                            </a>
+                                        </div>
+                                    </li>
+                                    <li class="tabwrap">
+                                        <div class="lightgallery design-tab05">
+                                            <a href="../img/product5-1.svg">
+                                                <img src="../img/product5-1.svg" alt="Product Desgin" />
+                                                <figcaption>[회사프로젝트] 에코웨이브정수기</figcaption>
+                                            </a>
+                                            <a href=".../img/product5-2.svg">
+                                                <img src="../img/product5-2.svg" style="display: none;"
+                                                    alt="Product Desgin" />
+                                            </a>
+                                            <a href="../img/product5-3.svg">
+                                                <img src="../img/product5-3.svg" style="display: none;"
+                                                    alt="Product Desgin" />
+                                            </a>
+                                        </div>
+                                        <div class="lightgallery design-tab06">
+                                            <a href="../img/product6-1.svg">
+                                                <img src="../img/product6-1.svg" alt="Product Desgin" />
+                                                <figcaption>[회사프로젝트] 미니드라이기</figcaption>
+                                            </a>
+                                            <a href="../img/product6-2.svg">
+                                                <img src="../img/product6-2.svg" style="display: none;"
+                                                    style="display: none;" alt="Product Desgin" />
+                                            </a>
+                                        </div>
+                                    </li>
+                                    <li class="tabwrap">
+                                        <div class="lightgallery  design-tab07">
+                                            <a href="../img/product7-1.svg">
+                                                <img src="../img/product7-1.svg" alt="Product Desgin" />
+                                                <figcaption>[회사프로젝트] 현대택고데기 디자인</figcaption>
+                                            </a>
+                                            <a href="../img/product7-2.svg">
+                                                <img src="../img/product7-2.svg" style="display: none;"
+                                                    alt="Product Desgin" />
+                                            </a>
+                                            <a href="../img/product7-3.svg">
+                                                <img src="../img/product7-3.svg" style="display: none;"
+                                                    alt="Product Desgin" />
+                                            </a>
+                                            <a href="../img/product7-4.svg">
+                                                <img src="../img/product7-4.svg" style="display: none;"
+                                                    alt="Product Desgin" />
+                                            </a>
+                                        </div>
+                                        <div class="">
+                                            <a href="../img/empty.svg">
+                                                <img src="../img/empty.svg" alt="Product Desgin" />
+                                            </a>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="glide__arrows" id="productD-slide" data-glide-el="controls">
+                                <button class="glide__arrow glide__arrow--left" data-glide-dir="<"><i
+                                        class="xi-long-arrow-left"></i></button>
+                                <button class="glide__arrow glide__arrow--right" data-glide-dir=">"><i
+                                        class="xi-long-arrow-right"></i></button>
+                            </div>
+                        </div>
+                        <div class="glide slide2">
+                            <div class="glide__track" data-glide-el="track">
+                                <ul class="glide__slides" id="visualD-slide">
+                                    <li class="tabwrap">
+                                        <div class="lightgallery">
+                                            <a href="../img/visual1-1.svg">
+                                                <img src="../img/visual1-1.svg" alt="visual design" />
+                                                <figcaption>[회사프로젝트] 매직쉐프 패키지 디자인
+                                                    <p class="gray">커피머신(중형/대형)/서큘레이터/</p>
+                                                    <p class="gray">양면그릴/컨벤션오븐작업</p>
+                                                </figcaption>
+                                            </a>
+                                        </div>
+                                    </li>
+                                    <li class="tabwrap">
+                                        <div class="lightgallery">
+                                            <a href="../img/visual2-1.svg">
+                                                <img src="../img/visual2-1.svg" alt="visual design" />
+                                                <figcaption>[프리랜서] 필수 뷰티제품 패키지 디자인
+                                                </figcaption>
+                                            </a>
+                                        </div>
+                                    </li>
+                                    <li class="tabwrap">
+                                        <div class="lightgallery">
+                                            <a href="../img/visual2-1.svg">
+                                                <img src="../img/visual2-1.svg" alt="visual design" />
+                                                <figcaption>[프리랜서] 필수 뷰티제품 패키지 디자인
+                                                </figcaption>
+                                            </a>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="glide__arrows " id="visualD-slide" data-glide-el="controls">
+                                <button class="glide__arrow glide__arrow--left " data-glide-dir="<"><i
+                                        class="xi-long-arrow-left"></i></button>
+                                <button class="glide__arrow glide__arrow--right" data-glide-dir=">"><i
+                                        class="xi-long-arrow-right"></i></button>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </section>
         </section>
 
         <section id="section5">
