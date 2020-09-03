@@ -37,7 +37,6 @@ $(document).ready(function () {
 
     type: 'carousel',
     gap: 10,
-
     center: true,
     // startAt: 0,
     perView: 3,
