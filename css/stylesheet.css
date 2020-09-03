@@ -30,7 +30,7 @@ em {
   transform: translate(-50%, -50%);
 }
 
-.title>i {
+.title > i {
   color: #ff005c;
 }
 
@@ -99,7 +99,7 @@ nav {
   z-index: 999;
 }
 
-.menubar>span {
+.menubar > span {
   display: block;
   width: 100%;
   height: 6px;
@@ -111,8 +111,8 @@ nav {
   transition: all 0.5s ease;
 }
 
-.menubar>span::after,
-.menubar>span::before {
+.menubar > span::after,
+.menubar > span::before {
   content: "";
   position: absolute;
   left: 0;
@@ -123,24 +123,24 @@ nav {
   transition: all 0.5s ease;
 }
 
-.menubar>span::after {
+.menubar > span::after {
   top: 15px;
 }
 
-.menubar>span::before {
+.menubar > span::before {
   top: -15px;
 }
 
-.menubar.on1>span {
+.menubar.on1 > span {
   background: rgba(255, 255, 255, 0);
 }
 
-.menubar.on1>span::after {
+.menubar.on1 > span::after {
   top: 0;
   transform: rotate(45deg);
 }
 
-.menubar.on1>span::before {
+.menubar.on1 > span::before {
   top: 0;
   transform: rotate(-45deg);
 }
@@ -204,15 +204,16 @@ nav {
   transition: ease all 0.5s;
 }
 
-.snsbar {}
+.snsbar {
+}
 
-.snsbar>a {
+.snsbar > a {
   display: inline-block;
   overflow: hidden;
   position: relative;
 }
 
-.snsbar>a>i {
+.snsbar > a > i {
   font-size: 50px;
   padding: 10px;
   text-align: center;
@@ -227,7 +228,7 @@ nav {
   left: -100px;
 }
 
-.snsbar>a:hover .snsline {
+.snsbar > a:hover .snsline {
   position: absolute;
   top: 55%;
   left: 0;
@@ -311,9 +312,10 @@ nav {
 }
 
 /*section2*/
-#section2 {}
+#section2 {
+}
 
-#section2>.container {
+#section2 > .container {
   background: url(../img/sec02-bg.png) no-repeat;
   background-size: cover;
 }
@@ -489,19 +491,19 @@ input[type="radio"] {
   z-index: -1;
 }
 
-.webcon1>.webcon-img {
+.webcon1 > .webcon-img {
   background: url(../img/portfoliosite2.png) no-repeat -18px -2px;
   background-size: cover;
 }
 
-.webcon2>.webcon-img {
+.webcon2 > .webcon-img {
   background: #333333;
   /* background-size: cover; */
   overflow: hidden;
   text-align: center;
 }
 
-.webcon2>.webcon-img img {
+.webcon2 > .webcon-img img {
   width: 170px;
   transform: translateY(-7px);
 }
@@ -514,56 +516,56 @@ label[for*="tab"] {
   color: #aaa;
 }
 
-input[id="webtab01"]:checked~.webcon1 {
+input[id="webtab01"]:checked ~ .webcon1 {
   display: block;
 }
 
-input[id="webtab02"]:checked~.webcon2 {
+input[id="webtab02"]:checked ~ .webcon2 {
   display: block;
 }
 
-input[id="webtab03"]:checked~.webcon3 {
+input[id="webtab03"]:checked ~ .webcon3 {
   display: block;
 }
 
-input[id="webtab01"]:hover~.webcon2,
+input[id="webtab01"]:hover ~ .webcon2,
 .webcon3 {
   display: none;
 }
 
-input[id="webtab01"]:hover~.webcon1 {
+input[id="webtab01"]:hover ~ .webcon1 {
   display: block;
 }
 
-input[id="webtab02"]:hover~.webcon1,
+input[id="webtab02"]:hover ~ .webcon1,
 .webcon3 {
   display: none;
 }
 
-input[id="webtab02"]:hover~.webcon2 {
+input[id="webtab02"]:hover ~ .webcon2 {
   display: block;
 }
 
-input[id="webtab03"]:hover~.webcon1,
+input[id="webtab03"]:hover ~ .webcon1,
 .webcon2 {
   display: none;
 }
 
-input[id="webtab03"]:hover~.webcon3 {
+input[id="webtab03"]:hover ~ .webcon3 {
   display: block;
 }
 
 /*이거 hover시, 기존에 열려있는게 닫혀야하는데.... 어째하지..*/
 
-input[id="webtab01"]:checked~.list-btn>h1>label[for="webtab01"] {
+input[id="webtab01"]:checked ~ .list-btn > h1 > label[for="webtab01"] {
   color: #333333;
 }
 
-input[id="webtab02"]:checked~.list-btn>h1>label[for="webtab02"] {
+input[id="webtab02"]:checked ~ .list-btn > h1 > label[for="webtab02"] {
   color: #333333;
 }
 
-input[id="webtab03"]:checked~.list-btn>h1>label[for="webtab03"] {
+input[id="webtab03"]:checked ~ .list-btn > h1 > label[for="webtab03"] {
   color: #333333;
 }
 
@@ -728,29 +730,24 @@ input[id="webtab03"]:checked~.list-btn>h1>label[for="webtab03"] {
   z-index: -1;
 }
 
-
-
 /*버튼 커서 없애기*/
 
 .none {
   display: none;
 }
 
-/*탭메뉴*/
+/*슬라이드 탭메뉴*/
 
 .tabs-nav {
-  padding: 50px 0;
+  padding: 30px 0;
   width: 80%;
   /* height: 50px; */
   display: flex;
   margin: 0 auto;
-
-
 }
 
 .tabs-nav li {
   list-style: none;
-
 }
 
 .tabs-nav li a {
@@ -759,11 +756,10 @@ input[id="webtab03"]:checked~.list-btn>h1>label[for="webtab03"] {
   color: black;
 }
 
-.tabs-nav li a h3 {
+.tabs-nav li {
   position: relative;
   margin: 0 115px;
 }
-
 
 .tabs-nav li a.active h3 .on1 {
   width: 65%;
@@ -777,7 +773,6 @@ input[id="webtab03"]:checked~.list-btn>h1>label[for="webtab03"] {
   z-index: -1;
   /* animation-name: line;
   animation-duration: 0.5s; */
-
 }
 
 /* @-webkit-keyframes line {
@@ -791,8 +786,6 @@ input[id="webtab03"]:checked~.list-btn>h1>label[for="webtab03"] {
 } */
 
 /* 키프레임 이름 = 애니메이션 이름 */
-
-
 
 .checkbox {
   width: 10px;
@@ -817,60 +810,86 @@ input[id="webtab03"]:checked~.list-btn>h1>label[for="webtab03"] {
 }
 
 /*슬라이드*/
-#productD-slide {
+/* #productD-slide {
   background: burlywood;
 }
 
 #visualD-slide {
   background: cadetblue;
-}
+} */
 
 .slide-wrap {
-  width: 1000px;
-  /* margin: 0 auto; */
-  background: blanchedalmond;
 }
 
 .glide__slides {
-  width: 100%;
-  height: 500px;
-  /* margin: 0 auto; */
+  width: 1000px;
+  height: 550px;
   text-align: center;
-  background: #aaa;
+}
+
+.slide2 > .glide__track > .glide__slides {
+  padding: 12% 0;
+}
+.slide1 > .glide__track > .glide__slides {
+  padding: 2% 0;
+}
+
+.slide1,
+.slide2 {
+  overflow: hidden;
+  width: 1100px;
+
+  /* padding: 0 50px; */
+  position: relative;
+  margin: 0 auto;
+}
+.tabwrap div a {
+  position: relative;
 }
 
 .tabwrap div a img {
   width: 300px;
 }
 
+.tabwrap div a img {
+  border: 2.5px solid black;
+}
+.bg-box {
+  width: 300px;
+  height: 214px;
+  border: 2.5px solid black;
+  background: #fff;
+  position: absolute;
+  bottom: -5px;
+  left: 10px;
+  z-index: -1;
+}
+
+.tabwrap div a figcaption {
+  padding: 13px 0;
+}
+
 button {
   background: #fff;
   border: black 2px solid;
-  /* width: 20px;
-  height: 20px; */
   font-weight: bold;
   padding: 3px 7px;
   font-size: 18px;
-
+  opacity: 30%;
 }
-
-.slide1,
-.slide2 {
-  position: relative;
-  overflow: hidden;
+button:hover {
+  opacity: 70%;
+  transition: ease all 0.5s;
 }
-
-
 .glide__arrow--left {
   position: absolute;
-  top: 50%;
+  top: 45%;
   left: 0;
-
 }
 
 .glide__arrow--right {
   position: absolute;
-  top: 50%;
+  top: 45%;
   right: 0;
 }
 
@@ -884,7 +903,7 @@ button {
   width: 800px;
 }
 
-.section5>.title {
+.section5 > .title {
   color: #fff;
 }
 
@@ -894,12 +913,12 @@ button {
   text-align: center;
 }
 
-.section5>.snsbar {
+.section5 > .snsbar {
   margin: 0 auto;
   text-align: center;
 }
 
-.section5>.snsbar a i {
+.section5 > .snsbar a i {
   color: #fff;
   width: 100%;
   /* height: 20px; */

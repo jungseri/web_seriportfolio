@@ -27,13 +27,21 @@ $(document).ready(function () {
     $(".popup2").hide();
   });
   /*슬라이드*/
-  $(".lightgallery").lightGallery();
+  $(".lightgallery").lightGallery({
+    thumbnail: true,
+    animateThumb: false,
+    showThumbByDefault: false
+  });
 
   const config = {
+
     type: 'carousel',
+    gap: 10,
+
+    center: true,
     // startAt: 0,
     perView: 3,
-    autoplay: 1000,
+    // autoplay: 1000,
     breakpoints: {
       1024: {
         perView: 2
@@ -43,6 +51,8 @@ $(document).ready(function () {
       }
     }
   }
+
+
 
   new Glide('.slide1', config).mount();
 
