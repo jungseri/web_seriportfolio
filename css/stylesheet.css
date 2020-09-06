@@ -30,7 +30,7 @@ em {
   transform: translate(-50%, -50%);
 }
 
-.title > i {
+.title>i {
   color: #ff005c;
 }
 
@@ -47,6 +47,7 @@ em {
   width: 1200px;
   /* height: calc(100vh - 62px); */
   margin: 0 auto;
+  background: rgb(190, 236, 238);
 }
 
 section {
@@ -99,7 +100,7 @@ nav {
   z-index: 999;
 }
 
-.menubar > span {
+.menubar>span {
   display: block;
   width: 100%;
   height: 6px;
@@ -111,8 +112,8 @@ nav {
   transition: all 0.5s ease;
 }
 
-.menubar > span::after,
-.menubar > span::before {
+.menubar>span::after,
+.menubar>span::before {
   content: "";
   position: absolute;
   left: 0;
@@ -123,24 +124,24 @@ nav {
   transition: all 0.5s ease;
 }
 
-.menubar > span::after {
+.menubar>span::after {
   top: 15px;
 }
 
-.menubar > span::before {
+.menubar>span::before {
   top: -15px;
 }
 
-.menubar.on1 > span {
+.menubar.on1>span {
   background: rgba(255, 255, 255, 0);
 }
 
-.menubar.on1 > span::after {
+.menubar.on1>span::after {
   top: 0;
   transform: rotate(45deg);
 }
 
-.menubar.on1 > span::before {
+.menubar.on1>span::before {
   top: 0;
   transform: rotate(-45deg);
 }
@@ -179,11 +180,12 @@ nav {
   box-shadow: inset 180px 0 0 0 rgba(36, 130, 174, 0.7);
 } */
 
-.menulist {
-}
+.menulist {}
+
 .menulist li {
   overflow: hidden;
 }
+
 .menubtn {
   overflow: hidden;
   position: relative;
@@ -206,16 +208,15 @@ nav {
   transition: ease all 0.5s;
 }
 
-.snsbar {
-}
+.snsbar {}
 
-.snsbar > a {
+.snsbar>a {
   display: inline-block;
   overflow: hidden;
   position: relative;
 }
 
-.snsbar > a > i {
+.snsbar>a>i {
   font-size: 50px;
   padding: 10px;
   text-align: center;
@@ -230,7 +231,7 @@ nav {
   left: -100px;
 }
 
-.snsbar > a:hover .snsline {
+.snsbar>a:hover .snsline {
   position: absolute;
   top: 55%;
   left: 0;
@@ -240,7 +241,7 @@ nav {
 /*menudots*/
 .menudots {
   position: fixed;
-  left: 15px;
+  /* left: 15px; */
   top: 50%;
   transform: translate(0, -50%);
   z-index: 999;
@@ -269,14 +270,14 @@ nav {
 /*side-sns*/
 .side-sns ul {
   position: fixed;
-  right: 15px;
+  right: 0px;
   top: 50%;
   transform: translate(0, -50%);
   z-index: 999;
 }
 
 .side-sns ul li {
-  margin: 15px;
+  margin: 15px 35px;
   font-size: 30px;
 }
 
@@ -294,6 +295,7 @@ nav {
 .sec01-wrap {
   background: white;
   display: flex;
+  width: 66%;
 }
 
 .sec01-wrap li:first-child img {
@@ -314,10 +316,9 @@ nav {
 }
 
 /*section2*/
-#section2 {
-}
+#section2 {}
 
-#section2 > .container {
+#section2>.container {
   background: url(../img/sec02-bg.png) no-repeat;
   background-size: cover;
 }
@@ -332,10 +333,12 @@ nav {
 .sec02-intro {
   display: flex;
   padding: 3% 0;
+  width: 74%;
+  margin: 0 auto;
 }
 
 .sec02-intro li {
-  width: 430px;
+  width: 450px;
 }
 
 .sec02-intro li:last-child {
@@ -387,12 +390,13 @@ nav {
   font-size: 20px;
   padding-top: 5px;
   padding-bottom: 10px;
+  margin-left: 13%;
 }
 
 .sec02-img {
   margin: 0 auto;
-  width: 90%;
-  height: 150px;
+  width: 74%;
+  height: 165px;
   background: url(../img/Career.png) no-repeat;
   background-size: contain;
 }
@@ -493,19 +497,19 @@ input[type="radio"] {
   z-index: -1;
 }
 
-.webcon1 > .webcon-img {
+.webcon1>.webcon-img {
   background: url(../img/portfoliosite2.png) no-repeat -18px -2px;
   background-size: cover;
 }
 
-.webcon2 > .webcon-img {
+.webcon2>.webcon-img {
   background: #333333;
   /* background-size: cover; */
   overflow: hidden;
   text-align: center;
 }
 
-.webcon2 > .webcon-img img {
+.webcon2>.webcon-img img {
   width: 170px;
   transform: translateY(-7px);
 }
@@ -518,56 +522,56 @@ label[for*="tab"] {
   color: #aaa;
 }
 
-input[id="webtab01"]:checked ~ .webcon1 {
+input[id="webtab01"]:checked~.webcon1 {
   display: block;
 }
 
-input[id="webtab02"]:checked ~ .webcon2 {
+input[id="webtab02"]:checked~.webcon2 {
   display: block;
 }
 
-input[id="webtab03"]:checked ~ .webcon3 {
+input[id="webtab03"]:checked~.webcon3 {
   display: block;
 }
 
-input[id="webtab01"]:hover ~ .webcon2,
+input[id="webtab01"]:hover~.webcon2,
 .webcon3 {
   display: none;
 }
 
-input[id="webtab01"]:hover ~ .webcon1 {
+input[id="webtab01"]:hover~.webcon1 {
   display: block;
 }
 
-input[id="webtab02"]:hover ~ .webcon1,
+input[id="webtab02"]:hover~.webcon1,
 .webcon3 {
   display: none;
 }
 
-input[id="webtab02"]:hover ~ .webcon2 {
+input[id="webtab02"]:hover~.webcon2 {
   display: block;
 }
 
-input[id="webtab03"]:hover ~ .webcon1,
+input[id="webtab03"]:hover~.webcon1,
 .webcon2 {
   display: none;
 }
 
-input[id="webtab03"]:hover ~ .webcon3 {
+input[id="webtab03"]:hover~.webcon3 {
   display: block;
 }
 
 /*이거 hover시, 기존에 열려있는게 닫혀야하는데.... 어째하지..*/
 
-input[id="webtab01"]:checked ~ .list-btn > h1 > label[for="webtab01"] {
+input[id="webtab01"]:checked~.list-btn>h1>label[for="webtab01"] {
   color: #333333;
 }
 
-input[id="webtab02"]:checked ~ .list-btn > h1 > label[for="webtab02"] {
+input[id="webtab02"]:checked~.list-btn>h1>label[for="webtab02"] {
   color: #333333;
 }
 
-input[id="webtab03"]:checked ~ .list-btn > h1 > label[for="webtab03"] {
+input[id="webtab03"]:checked~.list-btn>h1>label[for="webtab03"] {
   color: #333333;
 }
 
@@ -835,24 +839,27 @@ input[id="webtab03"]:checked ~ .list-btn > h1 > label[for="webtab03"] {
   margin: 0 auto;
 }
 
-.slide2 > .glide__track > .glide__slides {
+.slide2>.glide__track>.glide__slides {
   padding: 12% 0;
 }
 
-.slide1 > .glide__track > .glide__slides {
+.slide1>.glide__track>.glide__slides {
   padding: 2% 0;
 }
+
 .glide {
-  width: 1080px;
   overflow: hidden;
   margin: 0 auto;
+  width: 93%;
 }
+
 .slide1,
 .slide2 {
   width: 1000px;
   margin: 0 auto;
 }
-.glide__slides > li {
+
+.glide__slides>li {
   width: 300px;
   padding: 0 8px;
 }
@@ -861,12 +868,19 @@ input[id="webtab03"]:checked ~ .list-btn > h1 > label[for="webtab03"] {
   width: 300px;
 }
 
+.empty {
+  width: 300px;
+
+}
+
 .tabwrap div a {
   position: relative;
 }
+
 .tabwrap div.design-tab01:hover a img {
   background: rgba(0, 0, 0, 0.5);
 }
+
 .tabwrap div a img {
   width: 300px;
 }
@@ -909,21 +923,25 @@ button:hover {
   top: 45%;
   left: 0;
 }
+
 .slide2 .glide__arrow--left {
   position: absolute;
   top: 40%;
   left: 0;
 }
+
 .slide1 .glide__arrow--right {
   position: absolute;
   top: 45%;
   right: 0;
 }
+
 .slide2 .glide__arrow--right {
   position: absolute;
   top: 40%;
   right: 0;
 }
+
 /*section5*/
 #section5 {
   background: url(../img/menupop-bg.png) no-repeat;
@@ -934,7 +952,7 @@ button:hover {
   width: 800px;
 }
 
-.section5 > .title {
+.section5>.title {
   color: #fff;
 }
 
@@ -944,12 +962,12 @@ button:hover {
   text-align: center;
 }
 
-.section5 > .snsbar {
+.section5>.snsbar {
   margin: 0 auto;
   text-align: center;
 }
 
-.section5 > .snsbar a i {
+.section5>.snsbar a i {
   color: #fff;
   width: 100%;
   /* height: 20px; */

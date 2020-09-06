@@ -27,22 +27,18 @@ $(document).ready(function () {
     $(".popup2").hide();
   });
   /*슬라이드*/
-  $(".lightgallery").lightGallery({
-    thumbnail: true,
-    animateThumb: false,
-    showThumbByDefault: false
-  });
+  $(".lightgallery").lightGallery();
 
   const config = {
 
     type: 'carousel',
-    gap: 10,
+    gap: 5,
     center: true,
     // startAt: 0,
     perView: 3,
     // autoplay: 1000,
     breakpoints: {
-      1024: {
+      1000: {
         perView: 2
       },
       600: {

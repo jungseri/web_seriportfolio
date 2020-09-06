@@ -15,20 +15,17 @@
     }
 
     /*화면너비 0~1220px*/
-    @media(max-width:1220px) {
+    @media(max-width:1260px) {
         .container {
-            width: 100%;
+            width: 90%;
             /* padding-right: 78px; */
-
+            background: blanchedalmond;
+            /* margin: 0 3%; */
         }
 
-        .sec01-wrap h1 {
-            /* margin-left: 1%;
-        padding-left: 5%; */
+        .glide {
+            width: 98%;
         }
-
-
-
     }
 
 
@@ -67,6 +64,9 @@
             font-size: 23px;
         }
 
+        .container {
+            width: 100%;
+        }
 
     }
 
