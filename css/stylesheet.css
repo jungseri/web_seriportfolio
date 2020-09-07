@@ -44,9 +44,9 @@ em {
 /*컨테이너*/
 
 .container {
-  width: 1200px;
-  /* height: calc(100vh - 62px); */
-  margin: 0 auto;
+  max-width: 1200px;
+  width: 90%;
+  margin: auto;
   background: rgb(190, 236, 238);
 }
 
@@ -820,75 +820,61 @@ input[id="webtab03"]:checked~.list-btn>h1>label[for="webtab03"] {
 }
 
 /*슬라이드*/
-/* #productD-slide {
-  background: burlywood;
-}
 
-#visualD-slide {
-  background: cadetblue;
-} */
-
-.slide-wrap {
+/* --- --- CAROUSEL --- --- */
+.slidewrap1,
+.slidewrap2 {
   position: relative;
+
 }
 
-.glide__slides {
-  width: 1000px;
-  height: 550px;
+.carousel__contenedor {}
+
+/* 오른쪽 왼쪽버튼 */
+.carousel__anterior,
+.carousel__siguiente {
+  position: absolute;
+  display: block;
+  width: 30px;
+  height: 30px;
+  border: none;
+  top: calc(50% - 35px);
+  cursor: pointer;
+  line-height: 30px;
   text-align: center;
-  margin: 0 auto;
+  background: none;
+  color: #fff;
+  opacity: 20%;
 }
 
-.slide2>.glide__track>.glide__slides {
-  padding: 12% 0;
+.carousel__anterior:hover,
+.carousel__siguiente:hover {
+  opacity: 100%;
 }
 
-.slide1>.glide__track>.glide__slides {
-  padding: 2% 0;
+.carousel__anterior {
+  left: -30px;
 }
 
-.glide {
+.carousel__siguiente {
+  right: -30px;
+}
+
+/* 슬라이드 */
+.carousel__lista {
   overflow: hidden;
-  margin: 0 auto;
-  width: 93%;
 }
 
-.slide1,
-.slide2 {
-  width: 1000px;
-  margin: 0 auto;
+.carousel__elemento {
+  text-align: center;
+  margin: 0 0.3%;
 }
 
-.glide__slides>li {
-  width: 300px;
-  padding: 0 8px;
-}
-
-.lightgallery {
+.tabwrap a img {
   width: 300px;
 }
 
-.empty {
-  width: 300px;
-
-}
-
-.tabwrap div a {
-  position: relative;
-}
-
-.tabwrap div.design-tab01:hover a img {
-  background: rgba(0, 0, 0, 0.5);
-}
-
-.tabwrap div a img {
-  width: 300px;
-}
-
-.tabwrap div a img {
-  border: 2.5px solid black;
-}
-
+/* 
 .bg-box {
   width: 300px;
   height: 214px;
@@ -940,7 +926,7 @@ button:hover {
   position: absolute;
   top: 40%;
   right: 0;
-}
+} */
 
 /*section5*/
 #section5 {
