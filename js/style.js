@@ -30,21 +30,18 @@ $(document).ready(function () {
   $(".lightgallery").lightGallery();
 
   const config = {
-
-    type: 'carousel',
-    gap: 5,
-    center: true,
-    // startAt: 0,
+    type: "carousel",
     perView: 3,
-    // autoplay: 1000,
+    // focusAt: "center",
+    gap: 10,
     breakpoints: {
       1000: {
-        perView: 2
+        perView: 2,
       },
-      600: {
-        perView: 1
-      }
-    }
+      500: {
+        perView: 1,
+      },
+    },
   }
 
 
