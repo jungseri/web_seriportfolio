@@ -38,7 +38,7 @@ $(document).ready(function () {
       1000: {
         perView: 2,
       },
-      500: {
+      800: {
         perView: 1,
       },
     },
