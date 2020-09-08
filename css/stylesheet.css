@@ -819,114 +819,114 @@ input[id="webtab03"]:checked~.list-btn>h1>label[for="webtab03"] {
   /* display: none; */
 }
 
-/*슬라이드*/
+.slide-wrap {
+  width: 1100px;
+  height: 700px;
+  position: relative;
+  overflow: hidden;
+  margin: 0 auto;
+  display: flex;
+  justify-items: center;
+  align-items: center;
+}
 
-/* --- --- CAROUSEL --- --- */
-.slidewrap1,
-.slidewrap2 {
+
+
+.swiper-container {
+  width: 1010px;
+  height: 650px;
+
+}
+
+.swiper-slide {
+  text-align: center;
+  font-size: 14px;
+  /* background: #fff; */
+  /* height: calc((100% - 30px) / 2); */
+  width: 300px;
+  height: 260px;
   position: relative;
 
+
+  /* Center slide text vertically */
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  align-items: center;
 }
 
-.carousel__contenedor {}
-
-/* 오른쪽 왼쪽버튼 */
-.carousel__anterior,
-.carousel__siguiente {
-  position: absolute;
-  display: block;
-  width: 30px;
-  height: 30px;
-  border: none;
-  top: calc(50% - 35px);
-  cursor: pointer;
+.swiper-slide a,
+img,
+figcaption {
+  width: 300px;
+  color: black;
+  text-decoration: none;
   line-height: 30px;
-  text-align: center;
-  background: none;
-  color: #fff;
-  opacity: 20%;
 }
 
-.carousel__anterior:hover,
-.carousel__siguiente:hover {
-  opacity: 100%;
-}
-
-.carousel__anterior {
-  left: -30px;
-}
-
-.carousel__siguiente {
-  right: -30px;
-}
-
-/* 슬라이드 */
-.carousel__lista {
-  overflow: hidden;
-}
-
-.carousel__elemento {
-  text-align: center;
-  margin: 0 0.3%;
-}
-
-.tabwrap a img {
+.swiper-slide a {
   width: 300px;
+  text-align: center;
+
 }
 
-/* 
-.bg-box {
-  width: 300px;
-  height: 214px;
-  border: 2.5px solid black;
-  background: #fff;
-  position: absolute;
-  bottom: -5px;
-  left: 10px;
-  z-index: -1;
+.swiper-slide a img {
+  border: 3px solid black;
+  text-align: left;
+  /* position: absolute;
+  top: 0;
+  left: 0; */
 }
 
-.tabwrap div a figcaption {
-  padding: 13px 0;
+/*버튼*/
+.swiper-button-next:after,
+.swiper-button-prev:after {
+  text-indent: -10000px;
 }
 
-button {
+.swiper-button-next,
+.swiper-button-prev {
   background: #fff;
   border: black 2px solid;
   font-weight: bold;
-  padding: 3px 7px;
-  font-size: 18px;
+  /* padding: 3px 7px; */
   opacity: 30%;
+  position: absolute;
+  top: 39%;
+  border: 3px solid black;
+  background: none;
+  width: 40px;
+  height: 40px;
+
 }
 
-button:hover {
+.swiper-button-next i,
+.swiper-button-prev i {
+  font-size: 30px;
+  color: black;
+}
+
+.swiper-button-next:hover,
+.swiper-button-prev:hover {
   opacity: 70%;
   transition: ease all 0.5s;
 }
 
-.slide1 .glide__arrow--left {
-  position: absolute;
-  top: 45%;
-  left: 0;
-}
-
-.slide2 .glide__arrow--left {
-  position: absolute;
-  top: 40%;
-  left: 0;
-}
-
-.slide1 .glide__arrow--right {
-  position: absolute;
-  top: 45%;
+.swiper-button-next {
   right: 0;
 }
 
-.slide2 .glide__arrow--right {
-  position: absolute;
-  top: 40%;
-  right: 0;
-} */
+.swiper-button-prev {
+  left: 0;
+}
 
 /*section5*/
 #section5 {

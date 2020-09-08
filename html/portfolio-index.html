@@ -9,10 +9,10 @@
     <!--css-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.css" />
     <link rel="stylesheet" href="../lightGallery-master/lightGallery-master/src/css/lightgallery.css">
-    <link rel="stylesheet" href="../css/glide.core.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat&family=Open+Sans&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/normalize.css@8.0.1/normalize.min.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glider-js@1.7.3/glider.min.css">
+    <!-- <link rel="stylesheet" href="../css/glide.core.min.css"> -->
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+
     <link rel="stylesheet" href="../css/reset.css">
     <link rel="stylesheet" href="../css/stylesheet.css">
     <link rel="stylesheet" href="../css/mediaqueries.css">
@@ -35,13 +35,13 @@
 
 
     <!--javascript-->
-    <script src="https://kit.fontawesome.com/2c36e9b7b1.js" crossorigin="anonymous"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
     <script src="../lightGallery-master/lightGallery-master/src/js/lightgallery.js"></script>
     <script src="../lightGallery-master/lightGallery-master/dist/js/lightgallery-all.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/glider-js@1.7.3/glider.min.js"></script>
+    <script src="https://unpkg.com/swiper/swiper-bundle.js"></script>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
 
-    <script src="https://cdn.jsdelivr.net/npm/@glidejs/glide"></script>
+    <!-- <script src="https://cdn.jsdelivr.net/npm/@glidejs/glide"></script> -->
     <script src="../js/style.js"></script>
 
     <!--기본formjs-->
@@ -392,222 +392,75 @@
                 </ul>
 
                 <!-- slide-wrap -->
-                <div class="contenedor">
-                    <div class="carousel slidewrap1">
-                        <div class="carousel__contenedor ">
-
-                            <button aria-label="Anterior" class="carousel__anterior">
-                                <i class="fas fa-chevron-left"></i>
-                            </button>
-
-                            <div class="carousel__lista slide1">
-                                <div class="carousel__elemento lightgallery">
-                                    <div class="tabwrap">
-                                        <a href="../img/product1-1.jpg">
-                                            <img src="../img/product1-1.jpg" alt="Product Desgin" />
-                                            <span class="bg-box"></span>
-                                            <figcaption>[컨셉디자인] 공기청정기</figcaption>
-                                        </a>
-                                        <a href="../img/product1-2.jpg">
-                                            <img src="../img/product1-2.jpg" style="display: none;"
-                                                alt="Product Desgin" />
-                                        </a>
-                                        <a href="../img/product1-3.jpg">
-                                            <img src="../img/product1-3.jpg" style="display: none;"
-                                                alt="Product Desgin" />
-                                        </a>
-                                        <a href="../img/product1-4.jpg">
-                                            <img src="../img/product1-4.jpg" style="display: none;"
-                                                alt="Product Desgin" />
-                                        </a>
-                                        <a href="../img/product1-5.jpg">
-                                            <img src="../img/product1-5.jpg" style="display: none;"
-                                                alt="Product Desgin" />
-                                        </a>
-                                    </div>
-                                    <div class="tabwrap">
-                                        <a href="../img/product2-1.jpg">
-                                            <img src="../img/product2-1.jpg" alt="Product Desgin" />
-                                            <span class="bg-box"></span>
-                                            <figcaption>[컨셉디자인] 커피머신</figcaption>
-                                        </a>
-                                        <a href="../img/product2-2.jpg">
-                                            <img src="../img/product2-2.jpg" style="display: none;"
-                                                alt="Product Desgin" />
-                                        </a>
-                                        <a href="../img/product2-3.jpg">
-                                            <img src="../img/product2-3.jpg" style="display: none;"
-                                                alt="Product Desgin" />
-                                        </a>
-                                        <a href="../img/product2-4.jpg">
-                                            <img src="../img/product2-4.jpg" style="display: none;"
-                                                alt="Product Desgin" />
-                                        </a>
-                                        <a href="../img/product2-5.jpg">
-                                            <img src="../img/product2-5.jpg" style="display: none;"
-                                                alt="Product Desgin" />
-                                        </a>
-                                        <a href="../img/product2-6.jpg">
-                                            <img src="../img/product2-6.jpg" style="display: none;"
-                                                alt="Product Desgin" />
-                                        </a>
-                                    </div>
-                                </div>
-                                <div class="carousel__elemento lightgallery">
-                                    <div class="tabwrap">
-                                        <a href="../img/product3-1.jpg">
-                                            <img src="../img/product3-1.jpg" alt=" Product Desgin" />
-                                            <span class="bg-box"></span>
-                                            <figcaption>[컨셉디자인] 빔프로젝트</figcaption>
-                                        </a>
-                                        <a href="../img/product3-2.jpg">
-                                            <img src="../img/product3-2.jpg" style="display: none;"
-                                                alt="Product Desgin" />
-                                        </a>
-                                        <a href="../img/product3-3.jpg">
-                                            <img src="../img/product3-3.jpg" style="display: none;"
-                                                alt="Product Desgin" />
-                                        </a>
-                                        <a href="../img/product3-4.jpg">
-                                            <img src="../img/product3-4.jpg" style="display: none;"
-                                                alt="Product Desgin" />
-                                        </a>
-                                    </div>
-                                    <div class="tabwrap">
-                                        <a href="../img/product4-1.jpg">
-                                            <img src="../img/product4-1.jpg" alt="Product Desgin" />
-                                            <span class="bg-box"></span>
-                                            <figcaption>[회사프로젝트] 태국향정수기</figcaption>
-                                        </a>
-                                        <a href="../img/product4-3.jpg">
-                                            <img src="../img/product4-3.jpg" style="display: none;"
-                                                alt="Product Desgin" />
-                                        </a>
-                                        <a href="../img/product4-3.jpg">
-                                            <img src="../img/product4-3.jpg" style="display: none;"
-                                                alt="Product Desgin" />
-                                        </a>
-                                        <a href="../img/product4-4.jpg">
-                                            <img src="../img/product4-4.jpg" style="display: none;"
-                                                alt="Product Desgin" />
-                                        </a>
-                                    </div>
-                                </div>
-                                <div class="carousel__elemento lightgallery">
-                                    <div class="tabwrap">
-                                        <a href="../img/product5-1.jpg">
-                                            <img src="../img/product5-1.jpg" alt="Product Desgin" />
-                                            <span class="bg-box"></span>
-                                            <figcaption>[회사프로젝트] 에코웨이브정수기</figcaption>
-                                        </a>
-                                        <a href="../img/product5-2.jpg">
-                                            <img src="../img/product5-2.jpg" style="display: none;"
-                                                alt="Product Desgin" />
-                                        </a>
-                                        <a href="../img/product5-3.jpg">
-                                            <img src="../img/product5-3.jpg" style="display: none;"
-                                                alt="Product Desgin" />
-                                        </a>
-                                    </div>
-                                    <div class="tabwrap">
-                                        <a href="../img/product6-1.jpg">
-                                            <img src="../img/product6-1.jpg" alt="Product Desgin" />
-                                            <span class="bg-box"></span>
-                                            <figcaption>[회사프로젝트] 미니드라이기</figcaption>
-                                        </a>
-                                        <a href="../img/product6-2.jpg">
-                                            <img src="../img/product6-2.jpg" style="display: none;"
-                                                style="display: none;" alt="Product Desgin" />
-                                        </a>
-                                    </div>
-                                </div>
-                                <div class="carousel__elemento ">
-                                    <div class="tabwrap lightgallery">
-                                        <a href="../img/product7-1.jpg">
-                                            <img src="../img/product7-1.jpg" alt="Product Desgin" />
-                                            <span class="bg-box"></span>
-                                            <figcaption>[회사프로젝트] 현대택고데기 디자인</figcaption>
-                                        </a>
-                                        <a href="../img/product7-2.jpg">
-                                            <img src="../img/product7-2.jpg" style="display: none;"
-                                                alt="Product Desgin" />
-                                        </a>
-                                        <a href="../img/product7-3.jpg">
-                                            <img src="../img/product7-3.jpg" style="display: none;"
-                                                alt="Product Desgin" />
-                                        </a>
-                                        <a href="../img/product7-4.jpg">
-                                            <img src="../img/product7-4.jpg" style="display: none;"
-                                                alt="Product Desgin" />
-                                        </a>
-                                    </div>
-                                    <div class="tabwrap">
-                                        <a href="../img/empty.jpg">
-                                            <img src="../img/empty.jpg" alt="Product Desgin" />
-                                            <span class="bg-box"></span>
-                                        </a>
-                                    </div>
-                                </div>
+                <div class="slide-wrap">
+                    <!-- Swiper -->
+                    <div class="swiper-container">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide lightgallery">
+                                <a href="#a">
+                                    <img src="../img/product1-1.jpg" alt="Product Desgin" />
+                                    <span class="bg-box"></span>
+                                    <figcaption>[컨셉디자인] 공기청정기</figcaption>
+                                </a>
                             </div>
+                            <div class="swiper-slide lightgallery">
+                                <a href="#a">
+                                    <img src="../img/product2-1.jpg" alt="Product Desgin" />
+                                    <span class="bg-box"></span>
+                                    <figcaption>[컨셉디자인] 커피머신</figcaption>
+                                </a>
+                            </div>
+                            <div class="swiper-slide lightgallery">
+                                <a href="#a">
+                                    <img src="../img/product3-1.jpg" alt=" Product Desgin" />
+                                    <span class="bg-box"></span>
+                                    <figcaption>[컨셉디자인] 빔프로젝트</figcaption>
+                                </a>
+                            </div>
+                            <div class="swiper-slide lightgallery">
+                                <a href="#a">
+                                    <img src="../img/product4-1.jpg" alt="Product Desgin" />
+                                    <span class="bg-box"></span>
+                                    <figcaption>[회사프로젝트] 태국향정수기</figcaption>
+                                </a>
+                            </div>
+                            <div class="swiper-slide lightgallery">
+                                <a href="#a">
+                                    <img src="../img/product5-1.jpg" alt="Product Desgin" />
+                                    <span class="bg-box"></span>
+                                    <figcaption>[회사프로젝트] 에코웨이브정수기</figcaption>
+                                </a>
+                            </div>
+                            <div class="swiper-slide lightgallery">
+                                <a href="#a">
+                                    <img src="../img/product6-1.jpg" alt="Product Desgin" />
+                                    <span class="bg-box"></span>
+                                    <figcaption>[회사프로젝트] 미니드라이기</figcaption>
+                                </a>
+                            </div>
+                            <div class="swiper-slide lightgallery">
+                                <a href="#a">
+                                    <img src="../img/product7-1.jpg" alt="Product Desgin" />
+                                    <span class="bg-box"></span>
+                                    <figcaption>[회사프로젝트] 현대택고데기 디자인</figcaption>
+                                </a>
+                            </div>
+                            <div class="swiper-slide">
+                                <a href="#a">
+                                    <img src="../img/empty.jpg" alt="Product Desgin" />
+                                    <span class="bg-box"></span>
+                                    <figcaption style="opacity: 0;">빈공간</figcaption>
 
-                            <button aria-label="Siguiente" class="carousel__siguiente">
-                                <i class="fas fa-chevron-right"></i>
-                            </button>
-                        </div>
-
-                        <div role="tablist" class="carousel__indicadores"></div>
-                    </div>
-                    <div class="carousel slidewrap2">
-                        <div class="carousel__contenedor">
-
-                            <button aria-label="Anterior" class="carousel__anterior">
-                                <i class="fas fa-chevron-left"></i>
-                            </button>
-
-                            <div class="carousel__lista slide2">
-                                <div class="carousel__elemento lightgallery">
-                                    <div class="tabwrap">
-                                        <a href="../img/visual1-1.jpg">
-                                            <img src="../img/visual1-1.jpg" alt="visual design" />
-                                            <span class="bg-box"></span>
-                                            <figcaption>[회사프로젝트] 매직쉐프 패키지 디자인
-                                                <p class="gray">커피머신(중형/대형)/서큘레이터/</p>
-                                                <p class="gray">양면그릴/컨벤션오븐작업</p>
-                                            </figcaption>
-                                        </a>
-                                    </div>
-                                </div>
-                                <div class="carousel__elemento lightgallery">
-                                    <div class="tabwrap">
-                                        <a href="../img/visual2-1.jpg">
-                                            <img src="../img/visual2-1.jpg" alt="visual design" />
-                                            <span class="bg-box"></span>
-                                            <figcaption>[프리랜서] 필수 뷰티제품 패키지 디자인
-                                            </figcaption>
-                                        </a>
-                                    </div>
-                                </div>
-                                <div class="carousel__elemento lightgallery">
-                                    <div class="tabwrap">
-                                        <a href="../img/visual2-1.jpg">
-                                            <img src="../img/visual2-1.jpg" alt="visual design" />
-                                            <span class="bg-box"></span>
-                                            <figcaption>[프리랜서] 필수 뷰티제품 패키지 디자인
-                                            </figcaption>
-                                        </a>
-                                    </div>
-                                </div>
-
+                                </a>
                             </div>
                         </div>
+                        <!-- Add Pagination -->
 
-                        <button aria-label="Siguiente" class="carousel__siguiente">
-                            <i class="fas fa-chevron-right"></i>
-                        </button>
-
-                        <div role="tablist" class="carousel__indicadores"></div>
                     </div>
+                    <div class="swiper-button-next right1"><i class="xi-long-arrow-right"></i></div>
+                    <div class="swiper-button-prev left1"><i class="xi-long-arrow-left"></i></div>
                 </div>
+            </div>
         </section>
         </section>
 
