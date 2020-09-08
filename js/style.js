@@ -27,43 +27,26 @@ $(document).ready(function () {
   /*슬라이드*/
   $(".lightgallery").lightGallery();
 
-  var swiper = new Swiper('.swiper-container', {
-    slidesPerView: 3,
-    slidesPerColumn: 2,
-    spaceBetween: 30,
-
-    pagination: {
-      el: '.swiper-pagination',
-      clickable: true,
-    },
-
+  const config = {
+    type: "carousel",
+    perView: 3,
+    // focusAt: "center",
+    gap: 10,
     breakpoints: {
-      300: {
-        slidesPerView: 1,
-        slidesPerColumn: 2,
-        spaceBetween: 20,
+      1000: {
+        perView: 2,
       },
-      768: {
-        slidesPerView: 2,
-        slidesPerColumn: 2,
-        spaceBetween: 20,
-      },
-      1100: {
-        slidesPerView: 3,
-        slidesPerColumn: 2,
-        spaceBetween: 20,
+      500: {
+        perView: 1,
       },
     },
-    navigation: {
-      nextEl: '.swiper-button-next',
-      prevEl: '.swiper-button-prev',
-    },
-    loop: true,
-    // loopedSlides: 5,
-    loopFillGroupWithBlank: true,
+  }
 
-  });
 
+
+  new Glide('.slide1', config).mount();
+
+  new Glide('.slide2', config).mount();
   /*탭버튼*/
   var tabAnchor = $(".tabs-nav li a"),
     tabpanel = $(".glide__slides");
@@ -83,128 +66,3 @@ $(document).ready(function () {
     $($target).show();
   });
 });
-
-// const config = {
-//   slidesToShow: 1,
-//   slidesToScroll: 1,
-//   // dots: '.carousel__indicadores',
-//   arrows: {
-//     prev: ".carousel__anterior",
-//     next: ".carousel__siguiente",
-//   },
-
-//   responsive: [
-//     {
-//       // screens greater than >= 775px
-//       breakpoint: 300,
-//       settings: {
-//         // Set to `auto` and provide item width to adjust to viewport
-//         slidesToShow: 1,
-//         slidesToScroll: 1,
-//       },
-//     },
-//     {
-//       // screens greater than >= 775px
-//       breakpoint: 550,
-//       settings: {
-//         // Set to `auto` and provide item width to adjust to viewport
-//         slidesToShow: 2,
-//         slidesToScroll: 2,
-//       },
-//     },
-//     {
-//       // screens greater than >= 1024px
-//       breakpoint: 800,
-//       settings: {
-//         slidesToShow: 3,
-//         slidesToScroll: 3,
-//       },
-//     },
-//   ],
-// };
-// window.addEventListener("load", function () {
-//   new Glider(document.querySelector(".slide1", config));
-// });
-// window.addEventListener("load", function () {
-//   new Glider(document.querySelector(".slide2", config));
-// });
-// window.addEventListener("load", function () {
-//   new Glider(document.querySelector(".slide1"), {
-//     slidesToShow: 1,
-//     slidesToScroll: 1,
-//     // dots: '.carousel__indicadores',
-//     arrows: {
-//       prev: ".carousel__anterior",
-//       next: ".carousel__siguiente",
-//     },
-
-//     responsive: [
-//       {
-//         // screens greater than >= 775px
-//         breakpoint: 300,
-//         settings: {
-//           // Set to `auto` and provide item width to adjust to viewport
-//           slidesToShow: 1,
-//           slidesToScroll: 1,
-//         },
-//       },
-//       {
-//         // screens greater than >= 775px
-//         breakpoint: 550,
-//         settings: {
-//           // Set to `auto` and provide item width to adjust to viewport
-//           slidesToShow: 2,
-//           slidesToScroll: 2,
-//         },
-//       },
-//       {
-//         // screens greater than >= 1024px
-//         breakpoint: 800,
-//         settings: {
-//           slidesToShow: 3,
-//           slidesToScroll: 3,
-//         },
-//       },
-//     ],
-//   });
-// });
-// window.addEventListener("load", function () {
-//   new Glider(document.querySelector(".slide2"), {
-//     slidesToShow: 1,
-//     slidesToScroll: 1,
-//     // dots: '.carousel__indicadores',
-//     arrows: {
-//       prev: ".carousel__anterior",
-//       next: ".carousel__siguiente",
-//     },
-
-//     responsive: [
-//       {
-//         // screens greater than >= 775px
-//         breakpoint: 300,
-//         settings: {
-//           // Set to `auto` and provide item width to adjust to viewport
-//           slidesToShow: 1,
-//           slidesToScroll: 1,
-//         },
-//       },
-//       {
-//         // screens greater than >= 775px
-//         breakpoint: 550,
-//         settings: {
-//           // Set to `auto` and provide item width to adjust to viewport
-//           slidesToShow: 2,
-//           slidesToScroll: 2,
-//         },
-//       },
-//       {
-//         // screens greater than >= 1024px
-//         breakpoint: 800,
-//         settings: {
-//           slidesToShow: 3,
-//           slidesToScroll: 3,
-//         },
-//       },
-//     ],
-//   });
-// });

@@ -1,25 +1,38 @@
 /*미디어쿼리*/
 @media(max-width:1600px) {}
 
+
 @media(max-width:1400px) {}
 
-/* 화면 너비 0~1200px _태블릿*/
-@media screen and (max-width: 1200px) {
+/*화면너비 0~1220px*/
+@media(max-width:1200px) {
     .container {
+        width: 100%;
+        /* padding-right: 78px; */
+        background: blanchedalmond;
+        /* margin: 0 3%; */
+    }
+
+    .slides-wrap {
         width: 100%;
     }
 
-    .slide-wrap {
-        width: 90%;
+    .glide {
+        width: 80%;
     }
 
-    .swiper-container {
-        width: 90%;
+
+    .slide1,
+    .slide2 {
+        width: 100%;
     }
 }
 
+
 /* 화면 너비 0~960px _태블릿*/
 @media (max-width:1100px) {
+
+
     .menudots {
         display: none;
     }
@@ -53,18 +66,48 @@
         font-size: 23px;
     }
 
-    /* 화면 너비 0~960px _태블릿*/
-    @media (max-width:960px) {
-        .menudots {
-            display: none;
-        }
+    .container {
+        width: 100%;
+    }
 
-        .side-sns {
-            display: none;
-        }
+    .slides-wrap {
+        width: 100%;
+    }
+
+    .glide {
+        width: 80%;
+    }
+
+    .slide1,
+    .slide2 {
+        width: 90%;
+    }
+
+}
+
+/* 화면 너비 0~960px _태블릿*/
+@media (max-width:960px) {
+    .menudots {
+        display: none;
+    }
+
+    .side-sns {
+        display: none;
+    }
+
+    .sec01-wrap {
+        flex-direction: row;
+        flex-wrap: wrap-reverse;
     }
 
 
-    @media screen and (max-width: 768px) {}
+}
 
-    @media screen and (max-width: 400px) {}
+/*화면너비 0~768px*/
+@media(max-width:768px) {}
+
+/*화면너비 0~600px*/
+@media(max-width:600px) {}
+
+/*화면너비 0~480px*/
+@media(max-width:480px) {}
