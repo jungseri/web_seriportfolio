@@ -859,15 +859,6 @@ input[id="webtab03"]:checked~.list-btn>h1>label[for="webtab03"] {
   margin: 0 auto;
 }
 
-.glide__slides>li {
-  width: 300px;
-  padding: 0 8px;
-}
-
-.lightgallery {
-  width: 300px;
-}
-
 .empty {
   width: 300px;
 }
@@ -880,8 +871,6 @@ input[id="webtab03"]:checked~.list-btn>h1>label[for="webtab03"] {
   width: 300px;
   border: 2.5px solid black;
 }
-
-
 
 .bg-box {
   width: 300px;

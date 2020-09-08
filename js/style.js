@@ -33,7 +33,7 @@ $(document).ready(function () {
     type: "carousel",
     perView: 3,
     // focusAt: "center",
-    gap: 10,
+    // gap: 10,
     breakpoints: {
       1000: {
         perView: 2,
