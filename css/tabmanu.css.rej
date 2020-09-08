@@ -1,0 +1,10 @@
+diff a/css/tabmanu.css b/css/tabmanu.css	(rejected hunks)
+@@ -120,7 +120,7 @@
+   background: #aaa;
+ }
+ 
+-.tabwrap div a img {
++.tabwrap a img {
+   width: 300px;
+ }
+ 
