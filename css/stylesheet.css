@@ -870,24 +870,18 @@ input[id="webtab03"]:checked~.list-btn>h1>label[for="webtab03"] {
 
 .empty {
   width: 300px;
-
 }
 
-.tabwrap div a {
+.gs-wrap a {
   position: relative;
 }
 
-.tabwrap div.design-tab01:hover a img {
-  background: rgba(0, 0, 0, 0.5);
-}
-
-.tabwrap div a img {
+.gs-wrap a img {
   width: 300px;
-}
-
-.tabwrap div a img {
   border: 2.5px solid black;
 }
+
+
 
 .bg-box {
   width: 300px;
@@ -900,7 +894,7 @@ input[id="webtab03"]:checked~.list-btn>h1>label[for="webtab03"] {
   z-index: -1;
 }
 
-.tabwrap div a figcaption {
+.gs-wrap a p {
   padding: 13px 0;
 }
 
