@@ -318,15 +318,9 @@ nav {
 /*section2*/
 #section2 {}
 
-#section2>.container {
+#section2 .sec02-bg {
   background: url(../img/sec02-bg.png) no-repeat;
   background-size: cover;
-}
-
-.sec02-bg {
-  /* width: 1200px; */
-  /* background: url(../img/sec02-.png);
-    background-size: cover; */
 }
 
 /*소개*/
@@ -420,7 +414,7 @@ nav {
   display: flex;
   font-size: 30px;
   padding-top: 42px;
-  width: 800px;
+  width: 80%;
   margin: 0 auto;
 }
 
@@ -857,10 +851,6 @@ input[id="webtab03"]:checked~.list-btn>h1>label[for="webtab03"] {
 .slide2 {
   width: 1000px;
   margin: 0 auto;
-}
-
-.empty {
-  width: 300px;
 }
 
 .gs-wrap a {

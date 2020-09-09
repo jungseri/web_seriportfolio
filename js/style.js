@@ -35,10 +35,10 @@ $(document).ready(function () {
     // focusAt: "center",
     // gap: 10,
     breakpoints: {
-      1000: {
+      1100: {
         perView: 2,
       },
-      600: {
+      800: {
         perView: 1,
       },
     },
