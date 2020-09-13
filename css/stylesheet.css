@@ -447,126 +447,124 @@ nav {
 /*탭메뉴*/
 
 .web-portfolio {
-  padding-top: 42px;
+  padding-top: 50px;
   width: 800px;
   margin: 0 auto;
+  display: flex;
+  /* position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); */
 }
 
 .list-btn {
-  float: left;
-  padding: 7% 0;
+  flex: 1
 }
 
-.list-btn h1 {
-  width: 390px;
+.list-content {
+  flex: 1
 }
 
-input[type="radio"] {
-  display: none;
+.list-btn {
+  margin: 12% 0;
 }
 
-.webconbox {
-  float: right;
-  width: 50%;
-  height: 320px;
-  /* background: #aaa; */
-  display: none;
-  overflow: hidden;
+.list-btn h1 a {
+  font-size: 35px;
+  border: none;
+  background: none;
+  text-align: center;
+  width: 100%;
+  padding: 5% 0;
+}
+
+.list-content {
+  width: 460px;
+  height: 400px;
   position: relative;
 }
 
-.webconbox .webcon-img {
+.webcon-img {
+  width: 440px;
+  height: 380px;
   border: black solid 5px;
-  width: 380px;
-  height: 290px;
+  background: #aaa;
 }
 
-.webconbox .imgframe2 {
-  width: 380px;
-  height: 290px;
+.imgframe2 {
+  width: 440px;
+  height: 380px;
+  z-index: -1;
+  background: blue;
   border: black solid 5px;
   position: absolute;
-  top: 10px;
-  left: 10px;
-  z-index: -1;
+  bottom: 0px;
+  right: 0px;
 }
 
-.webcon1>.webcon-img {
-  background: url(../img/portfoliosite2.png) no-repeat -18px -2px;
-  background-size: cover;
+.tab1img {
+  width: 100%;
+  height: 100%;
+  background: url(../img/portfoliosite2.png) no-repeat;
+  background-size: contain;
+  background-position: center center;
 }
 
-.webcon2>.webcon-img {
-  background: #333333;
-  /* background-size: cover; */
-  overflow: hidden;
+.hover-bg {
+  opacity: 0;
+}
+
+.webcon-img:hover .hover-bg {
+  opacity: 1;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
   text-align: center;
+  transition: ease all 0.5s;
 }
 
-.webcon2>.webcon-img img {
-  width: 170px;
-  transform: translateY(-7px);
-}
-
-label[for*="tab"] {
-  display: inline-block;
+.webcon-img:hover .bg-wrap h1 {
+  color: #fff;
+  font-size: 30px;
+  text-align: center;
+  margin: 10px;
+  border-bottom: 1px solid #fff;
   padding: 10px;
   cursor: pointer;
-  font-size: 30px;
-  color: #aaa;
 }
 
-input[id="webtab01"]:checked~.webcon1 {
+.webcon-img:hover .img-btn {
   display: block;
 }
 
-input[id="webtab02"]:checked~.webcon2 {
-  display: block;
+.webcon-img:hover .img-btn p {
+  cursor: pointer;
+  padding: 10px;
+  border: 1px solid #fff;
+  color: #fff;
+  text-align: center;
+  display: inline-block;
+  margin: 10px;
 }
 
-input[id="webtab03"]:checked~.webcon3 {
-  display: block;
+
+.tab2 {
+  background: red;
 }
 
-input[id="webtab01"]:hover~.webcon2,
-.webcon3 {
+/* .work02 {
   display: none;
 }
 
-input[id="webtab01"]:hover~.webcon1 {
-  display: block;
-}
-
-input[id="webtab02"]:hover~.webcon1,
-.webcon3 {
+.work03 {
   display: none;
-}
+} */
 
-input[id="webtab02"]:hover~.webcon2 {
-  display: block;
-}
-
-input[id="webtab03"]:hover~.webcon1,
-.webcon2 {
-  display: none;
-}
-
-input[id="webtab03"]:hover~.webcon3 {
-  display: block;
-}
-
-/*이거 hover시, 기존에 열려있는게 닫혀야하는데.... 어째하지..*/
-
-input[id="webtab01"]:checked~.list-btn>h1>label[for="webtab01"] {
-  color: #333333;
-}
-
-input[id="webtab02"]:checked~.list-btn>h1>label[for="webtab02"] {
-  color: #333333;
-}
-
-input[id="webtab03"]:checked~.list-btn>h1>label[for="webtab03"] {
-  color: #333333;
+.tab3 {
+  background: yellow;
 }
 
 /*팝업*/

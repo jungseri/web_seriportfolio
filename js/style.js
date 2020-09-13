@@ -11,8 +11,25 @@ $(document).ready(function () {
     $(".menubar").toggleClass("on1");
     $(".menubar-slide").stop().slideToggle();
   });
+  /*tabsec03*/
+  var tabAnchor = $(".list-btn h1 a"),
+    tabpanel = $(".tabcon")
 
+  tabpanel.hide();
+  $("#work01").show();
 
+  tabAnchor.click(function (e) {
+    e.preventDefault();
+
+    tabAnchor.removeClass("active");
+    $(this).addClass("active");
+
+    tabpanel.hide();
+    var $target = $(this).attr('href');
+    console.log($target);
+    $($target).show();
+
+  });
   /*팝업*/
   $(".webcon1").click(function () {
     $(".popup1").show();

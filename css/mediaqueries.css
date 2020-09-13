@@ -86,66 +86,89 @@
 
 /*화면너비 0~768px*/
 @media(max-width:800px) {
-    /* .web-portfolio {
+    .web-portfolio {
         width: 100%;
-    } */
+        flex-direction: column-reverse;
+        /*     flex-wrap: wrap; */
 
-    /* 
+    }
+
     .list-btn {
-        clear: both;
-        width: 100%;
-        text-align: center;
-        padding: 3% 0;
+        flex: none;
     }
 
-    .list-btn h1 {
-        width: 100%;
+    .list-content {
+        width: 90%;
+        flex: none;
         margin: 0 auto;
     }
 
-    label[for*="tab"] {
-        font-size: 35px;
-
-    }
-
-    .webconbox {
-        clear: both;
-        width: 100%;
-        margin: 0 auto;
-
-    }
-
-    .webconbox .webcon-img {
-        width: 80%;
+    .list-btn {
         margin: 0 auto;
     }
 
-    .webcon1>.webcon-img {
-        background: url(../img/portfoliosite2.png) no-repeat 0px -2px;
-        background-size: cover;
-    } */
+    .list-btn h1 button {
+        padding: 0;
+    }
+
+    .webcon-img {
+        width: 97%;
+    }
+
+    .imgframe2 {
+        width: 97%;
+    }
 
 
 }
 
 /*화면너비 0~600px*/
-@media(max-width:600px) {}
-
-/*화면너비 0~480px*/
-@media(max-width:480px) {
-    /* .webconbox {
-        width: 100%;
-    }
-
-    .webcon-img img {
-        width: 100%;
+@media(max-width:600px) {
+    .webcon-img {
+        width: 96%;
     }
 
     .imgframe2 {
-        width: 100%;
-    } */
+        width: 96%;
+    }
+}
+
+/*화면너비 0~480px*/
+@media(max-width:480px) {
+    .list-content {
+        width: 360px;
+        height: 300px;
+
+    }
+
+    .webcon-img {
+        width: 340px;
+        height: 280px;
+    }
+
+
+    .imgframe2 {
+        width: 340px;
+        height: 280px;
+
+    }
 }
 
 
 /*화면너비 0~360px*/
-@media(max-width:360px) {}
+@media(max-width:360px) {
+    .list-content {
+        width: 90%;
+        height: 270px;
+    }
+
+    .webcon-img {
+        width: 94%;
+        height: 250px;
+    }
+
+    .imgframe2 {
+        width: 94%;
+        height: 250px;
+    }
+}
