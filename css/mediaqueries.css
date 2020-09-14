@@ -2,35 +2,18 @@
 @media(max-width:1600px) {}
 
 
-@media(max-width:1400px) {
-    .sec01-wrap {
-        /* display: flex;
-        position: absolute;
-        top: 60%;
-        left: 50%;
-        transform: translate(-50%,-50%); */
-    }
 
-
-}
-
-/*화면너비 0~1220px*/
-@media(max-width:1260px) {
-    .container {
-        width: 90%;
-        /* padding-right: 78px; */
-        background: blanchedalmond;
-        /* margin: 0 3%; */
-    }
-
-    .glide {
-        width: 98%;
-    }
-}
 
 
 /* 화면 너비 0~960px _태블릿*/
-@media (max-width:1100px) {
+@media (max-width:1260px) {
+
+    .container {
+        width: 100%;
+        height: auto;
+        background: red;
+    }
+
     .menudots {
         display: none;
     }
@@ -38,15 +21,6 @@
     .side-sns {
         display: none;
     }
-
-    /* .sec03-Wnum {
-        left: 30%;
-    }
-
-    .sec03-img ul {
-        display: flex;
-        padding: 50px 10%;
-    } */
 
     /*section2*/
     .sec02-main {
@@ -66,19 +40,26 @@
         font-size: 23px;
     }
 
-    .container {
-        width: 100%;
+    .slide-wrap {
+        width: 90%;
     }
 
+    /* .glide__slides {
+        width: 80%;
+    } */
+
+    /* .slide-wrap {}
+
     .glide {
-        width: 90%;
+        width: 80%;
+
     }
 
     .slide1,
     .slide2 {
-        width: 90%;
-        /* margin: 0 auto; */
-    }
+        width: 80%;
+
+    } */
 }
 
 /* 화면 너비 0~960px _태블릿*/

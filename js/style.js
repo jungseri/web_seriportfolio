@@ -11,25 +11,29 @@ $(document).ready(function () {
     $(".menubar").toggleClass("on1");
     $(".menubar-slide").stop().slideToggle();
   });
-  /*tabsec03*/
-  var tabAnchor = $(".list-btn h1 a"),
-    tabpanel = $(".tabcon")
 
-  tabpanel.hide();
+
+  /*tabsec03*/
+  var webAnchor = $(".list-btn h1 a"),
+    webpanel = $(".tabcon")
+
+  webpanel.hide();
   $("#work01").show();
 
-  tabAnchor.click(function (e) {
+  webAnchor.click(function (e) {
     e.preventDefault();
 
-    tabAnchor.removeClass("active");
-    $(this).addClass("active");
+    webAnchor.removeClass("active1");
+    $(this).addClass("active1");
 
-    tabpanel.hide();
-    var $target = $(this).attr('href');
-    console.log($target);
-    $($target).show();
+    webpanel.hide();
+    var $targets = $(this).attr('href');
+    console.log($targets);
+    $($targets).show();
 
   });
+
+
   /*팝업*/
   $(".webcon1").click(function () {
     $(".popup1").show();
@@ -50,7 +54,7 @@ $(document).ready(function () {
     type: "carousel",
     perView: 3,
     // focusAt: "center",
-    // gap: 10,
+    gap: 10,
     breakpoints: {
       1100: {
         perView: 2,
