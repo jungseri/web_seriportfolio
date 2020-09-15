@@ -54,6 +54,7 @@ $(document).ready(function () {
     type: "carousel",
     perView: 3,
     // focusAt: "center",
+    autoplay: 2000,
     gap: 10,
     breakpoints: {
       1100: {
