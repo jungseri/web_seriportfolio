@@ -58,9 +58,11 @@ $(document).ready(function () {
     breakpoints: {
       1100: {
         perView: 2,
+        gap: 10,
       },
       800: {
         perView: 1,
+        gap: 10,
       },
     },
   }
