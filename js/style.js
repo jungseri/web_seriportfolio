@@ -4,7 +4,6 @@ $(document).ready(function () {
     e.preventDefault();
     $(".menubar").toggleClass("on1");
     $(".menubar-slide").stop().slideToggle();
-
   });
 
   $(".menubtn").click(function () {
@@ -12,10 +11,9 @@ $(document).ready(function () {
     $(".menubar-slide").stop().slideToggle();
   });
 
-
   /*tabsec03*/
   var webAnchor = $(".list-btn h1 a"),
-    webpanel = $(".tabcon")
+    webpanel = $(".tabcon");
 
   webpanel.hide();
   $("#work01").show();
@@ -27,12 +25,10 @@ $(document).ready(function () {
     $(this).addClass("active1");
 
     webpanel.hide();
-    var $targets = $(this).attr('href');
+    var $targets = $(this).attr("href");
     console.log($targets);
     $($targets).show();
-
   });
-
 
   /*팝업*/
   $(".webcon1").click(function () {
@@ -66,16 +62,14 @@ $(document).ready(function () {
         gap: 10,
       },
     },
-  }
+  };
 
+  new Glide(".slide1", config).mount();
 
-
-  new Glide('.slide1', config).mount();
-
-  new Glide('.slide2', config).mount();
+  new Glide(".slide2", config).mount();
   /*탭버튼*/
   var tabAnchor = $(".tabs-nav li a"),
-    tabpanel = $(".glide__slides")
+    tabpanel = $(".glide__slides");
 
   tabpanel.hide();
   $("#productD-slide").show();
@@ -87,9 +81,38 @@ $(document).ready(function () {
     $(this).addClass("active");
 
     tabpanel.hide();
-    var $target = $(this).attr('href');
+    var $target = $(this).attr("href");
     console.log($target);
     $($target).show();
+  });
 
+  /*menudots*/
+  var dots = $(".menudots ul li"); //버튼을 변수에 할당(저장)
+  var cont = $("section");
+
+  $(window).scroll(function () {
+    //window에 브라우저에 scroll값이 됐을때 함수를 줌.
+    var wScroll = $(this).scrollTop();
+
+    if (wScroll >= cont.eq(0).offset().top) {
+      dots.removeClass("active3");
+      dots.eq(0).addClass("active3");
+    }
+    if (wScroll >= cont.eq(1).offset().top) {
+      dots.removeClass("active3");
+      dots.eq(1).addClass("active3");
+    }
+    if (wScroll >= cont.eq(2).offset().top) {
+      dots.removeClass("active3");
+      dots.eq(2).addClass("active3");
+    }
+    if (wScroll >= cont.eq(3).offset().top) {
+      dots.removeClass("active3");
+      dots.eq(3).addClass("active3");
+    }
+    if (wScroll >= cont.eq(4).offset().top) {
+      dots.removeClass("active3");
+      dots.eq(4).addClass("active3");
+    }
   });
 });
