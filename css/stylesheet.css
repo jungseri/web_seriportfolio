@@ -30,7 +30,7 @@ em {
   transform: translate(-50%, -50%);
 }
 
-.title > i {
+.title>i {
   color: #ff005c;
 }
 
@@ -100,7 +100,7 @@ nav {
   z-index: 999;
 }
 
-.menubar > span {
+.menubar>span {
   display: block;
   width: 100%;
   height: 6px;
@@ -112,8 +112,8 @@ nav {
   transition: all 0.5s ease;
 }
 
-.menubar > span::after,
-.menubar > span::before {
+.menubar>span::after,
+.menubar>span::before {
   content: "";
   position: absolute;
   left: 0;
@@ -124,24 +124,24 @@ nav {
   transition: all 0.5s ease;
 }
 
-.menubar > span::after {
+.menubar>span::after {
   top: 15px;
 }
 
-.menubar > span::before {
+.menubar>span::before {
   top: -15px;
 }
 
-.menubar.on1 > span {
+.menubar.on1>span {
   background: rgba(255, 255, 255, 0);
 }
 
-.menubar.on1 > span::after {
+.menubar.on1>span::after {
   top: 0;
   transform: rotate(45deg);
 }
 
-.menubar.on1 > span::before {
+.menubar.on1>span::before {
   top: 0;
   transform: rotate(-45deg);
 }
@@ -180,8 +180,7 @@ nav {
   box-shadow: inset 180px 0 0 0 rgba(36, 130, 174, 0.7);
 } */
 
-.menulist {
-}
+.menulist {}
 
 .menulist li {
   overflow: hidden;
@@ -197,28 +196,27 @@ nav {
   height: 10px;
   background: white;
   position: absolute;
-  top: 55%;
+  top: 50%;
   left: -1000px;
   /* z-index: 9999; */
 }
 
 .menulist li a.menubtn:hover .menuline {
   position: absolute;
-  top: 55%;
+  top: 50%;
   left: 0;
   transition: ease all 0.5s;
 }
 
-.snsbar {
-}
+.snsbar {}
 
-.snsbar > a {
+.snsbar>a {
   display: inline-block;
   overflow: hidden;
   position: relative;
 }
 
-.snsbar > a > i {
+.snsbar>a>i {
   font-size: 50px;
   padding: 10px;
   text-align: center;
@@ -233,7 +231,7 @@ nav {
   left: -100px;
 }
 
-.snsbar > a:hover .snsline {
+.snsbar>a:hover .snsline {
   position: absolute;
   top: 55%;
   left: 0;
@@ -263,6 +261,7 @@ nav {
   margin: 35px;
   transition: ease 0.5s;
 }
+
 .menudots ul li.active3 {
   height: 30px;
   border-radius: 10px;
@@ -292,28 +291,43 @@ nav {
 }
 
 /*section1*/
-
-.sec01-wrap {
-  background: white;
-  display: flex;
-  width: 66%;
+#section1 {
+  background: url(../img/sec01-bg.png) black top 0 left 0 fixed no-repeat;
+  background-size: cover;
+  background-position: center center;
 }
 
-.sec01-wrap li:first-child img {
-  width: 340px;
+
+.sec01-txtbox {
+  margin: 10% 50%;
+  width: 600px;
+  animation-duration: 0.3s;
+  animation-iteration-count: infinite;
 }
 
-.sec01-wrap li:last-child {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+@keyframes cursor {
+  0% {
+    border-right: 1px solid #fff
+  }
+
+  50% {
+    border-right: 1px solid #000
+  }
+
+  100% {
+    border-right: 1px solid #fff
+  }
 }
 
-.sec01-wrap h1 {
-  padding-left: 9vh;
-  border-left: 10px solid black;
-  margin-bottom: 9vh;
+.sec01-txtbox div h1 {
   font-size: 75px;
+
+}
+
+.sec01-txtbox h3 {
+  line-height: 70px;
+  font-size: 30px;
+  margin: 2px;
 }
 
 /*section2*/
@@ -928,7 +942,7 @@ button:hover {
   margin: 0 auto;
 }
 
-.section5 > .title {
+.section5>.title {
   color: #fff;
 }
 
@@ -938,12 +952,12 @@ button:hover {
   text-align: center;
 }
 
-.section5 > .snsbar {
+.section5>.snsbar {
   margin: 0 auto;
   text-align: center;
 }
 
-.section5 > .snsbar a i {
+.section5>.snsbar a i {
   color: #fff;
   width: 100%;
   font-size: 30px;
@@ -970,8 +984,7 @@ button:hover {
 }
 
 /*미디어쿼리*/
-@media (max-width: 1600px) {
-}
+@media (max-width: 1600px) {}
 
 /* 화면 너비 0~960px _태블릿*/
 @media (max-width: 1260px) {
@@ -987,13 +1000,52 @@ button:hover {
     display: none;
   }
 
+  /*menubar*/
+  .menubar-slide ul li {
+    padding: 1% 0;
+  }
+
+  .menubar-slide ul li a {
+    font-size: 60px;
+  }
+
+  .snsbar>a>i {
+    font-size: 40px;
+  }
+
   /*section1*/
+
+  #section1 {
+    background: url(../img/sec01-center2.png) black top 100px left 0 fixed no-repeat;
+    background-size: cover;
+    background-position: center center;
+  }
+
   .sec01-wrap {
-    background: white;
+    flex-direction: column-reverse;
+    text-align: center;
+    width: 100%;
+    height: 100vh;
+
+  }
+
+  .sec01-txtbox {
+    margin: 5% auto;
+    text-align: center;
+    width: 600px;
+    padding: 5% 0;
+    border: none;
+    /* font-size: 60px; */
+  }
+
+
+  .sec01-txtbox div {
     display: flex;
-    width: 86%;
-    /* width: 100%; */
-    /* margin: 0 auto; */
+    margin: 0 auto;
+  }
+
+  .sec01-txtbox div h1 {
+    margin-left: 25px;
   }
 
   /*section2*/
@@ -1005,8 +1057,7 @@ button:hover {
     background: none;
   }
 
-  .sec02-intro {
-  }
+  .sec02-intro {}
 
   .sec02-intro div h3 {
     font-size: 23px;
@@ -1043,22 +1094,25 @@ button:hover {
     transform: translate(0, 0);
   }
 
+  /*menubar*/
+  .menulist {
+    width: 80%;
+  }
+
   /*section1*/
-  .sec01-wrap {
-    flex-direction: column-reverse;
+  .sec01-txtbox div {
+    margin: 0 auto;
     text-align: center;
+    width: 470px;
   }
 
-  .sec01-wrap h1 {
-    width: 430px;
-    padding: 4% 0;
-    border: none;
-    margin: 0;
+  .sec01-txtbox div h1 {
     font-size: 60px;
+
   }
 
-  .sec01-wrap li:first-child img {
-    width: 200px;
+  .sec01-txtbox h3 {
+    font-size: 20px;
   }
 
   .web-portfolio {
@@ -1184,6 +1238,18 @@ button:hover {
 
 /*화면너비 0~600px*/
 @media (max-width: 600px) {
+  .menubar-slide ul li {
+    padding: 2% 0;
+  }
+
+  .menubar-slide ul li a {
+    font-size: 50px;
+  }
+
+  .snsbar>a>i {
+    font-size: 30px;
+  }
+
   .webcon-img {
     width: 96%;
   }
@@ -1197,6 +1263,22 @@ button:hover {
 @media (max-width: 480px) {
   .title {
     font-size: 31px;
+  }
+
+  .menuline {
+    height: 5px;
+  }
+
+  .menubar-slide ul li {
+    padding: 2% 0;
+  }
+
+  .menubar-slide ul li a {
+    font-size: 35px;
+  }
+
+  .snsbar>a>i {
+    font-size: 20px;
   }
 
   /*header*/
