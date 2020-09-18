@@ -30,7 +30,7 @@ em {
   transform: translate(-50%, -50%);
 }
 
-.title > i {
+.title>i {
   color: #ff005c;
 }
 
@@ -100,7 +100,7 @@ nav {
   z-index: 999;
 }
 
-.menubar > span {
+.menubar>span {
   display: block;
   width: 100%;
   height: 6px;
@@ -112,8 +112,8 @@ nav {
   transition: all 0.5s ease;
 }
 
-.menubar > span::after,
-.menubar > span::before {
+.menubar>span::after,
+.menubar>span::before {
   content: "";
   position: absolute;
   left: 0;
@@ -124,24 +124,24 @@ nav {
   transition: all 0.5s ease;
 }
 
-.menubar > span::after {
+.menubar>span::after {
   top: 15px;
 }
 
-.menubar > span::before {
+.menubar>span::before {
   top: -15px;
 }
 
-.menubar.on1 > span {
+.menubar.on1>span {
   background: rgba(255, 255, 255, 0);
 }
 
-.menubar.on1 > span::after {
+.menubar.on1>span::after {
   top: 0;
   transform: rotate(45deg);
 }
 
-.menubar.on1 > span::before {
+.menubar.on1>span::before {
   top: 0;
   transform: rotate(-45deg);
 }
@@ -180,8 +180,7 @@ nav {
   box-shadow: inset 180px 0 0 0 rgba(36, 130, 174, 0.7);
 } */
 
-.menulist {
-}
+.menulist {}
 
 .menulist li {
   overflow: hidden;
@@ -209,16 +208,15 @@ nav {
   transition: ease all 0.5s;
 }
 
-.snsbar {
-}
+.snsbar {}
 
-.snsbar > a {
+.snsbar>a {
   display: inline-block;
   overflow: hidden;
   position: relative;
 }
 
-.snsbar > a > i {
+.snsbar>a>i {
   font-size: 50px;
   padding: 10px;
   text-align: center;
@@ -233,7 +231,7 @@ nav {
   left: -100px;
 }
 
-.snsbar > a:hover .snsline {
+.snsbar>a:hover .snsline {
   position: absolute;
   top: 55%;
   left: 0;
@@ -379,19 +377,19 @@ nav {
   padding: 15px;
 }
 
-.sec02-box > .txtbox {
+.sec02-box>.txtbox {
   display: flex;
   border-bottom: 1px solid black;
 }
 
-.sec02-box > .txtbox > h1 {
+.sec02-box>.txtbox>h1 {
   font-size: 30px;
   padding: 0;
   margin: 0;
   flex: 1;
 }
 
-.sec02-box > .txtbox > p {
+.sec02-box>.txtbox>p {
   /* line-height: 36px; */
   text-align: right;
   flex: 2;
@@ -399,13 +397,13 @@ nav {
   padding: 16px 0 0 0;
 }
 
-.sec02-box > h3 {
+.sec02-box>h3 {
   padding-top: 14px;
   font-size: 16px;
   color: #454545;
 }
 
-.sec02-box > p {
+.sec02-box>p {
   font-size: 14px;
   color: #454545;
   padding-top: 5px;
@@ -583,8 +581,19 @@ nav {
   border: none;
   background: none;
   width: 100%;
+  color: #aaa;
   /* padding: 5% 0; */
 }
+
+.list-btn h1 a.hovers {
+  color: #222;
+  transition: ease 0.8s;
+}
+
+/* .list-btn h1 a.hovers {
+
+} */
+
 
 .list-content {
   width: 460px;
@@ -593,54 +602,45 @@ nav {
 }
 
 /*배경삽입*/
-.webcon-img {
-  width: 440px;
-  height: 380px;
-  border: black solid 5px;
-  background: #222222;
-}
 
 .imgframe2 {
   width: 440px;
   height: 380px;
   z-index: -1;
   /* background: blue; */
-  border: black solid 5px;
+  border: black solid 3px;
   position: absolute;
   top: 10px;
   left: 10px;
 }
 
 /*이미지삽입*/
+.webcon {
+  width: 440px;
+  height: 380px;
+  border: black solid 3px;
+}
+
 .tab1img {
-  width: 100%;
-  height: 100%;
-  background: url(../img/portfoliosite2.png) no-repeat;
+  background: url(../img/portfoliosite2.png)#222 center center no-repeat;
   background-size: contain;
-  background-position: center center;
 }
 
 .tab2img {
-  width: 100%;
-  height: 100%;
-  background: url(../img/sec03-visualdesign2.jpg) no-repeat;
+  background: url(../img/sec03-visualdesign2.jpg)#222 center center no-repeat;
   background-size: contain;
-  background-position: center center;
 }
 
 .tab3img {
-  width: 100%;
-  height: 100%;
-  background: url(../img/sec03-ProductDesign.jfif) no-repeat;
+  background: url(../img/sec03-ProductDesign.jfif)#222 center center no-repeat;
   background-size: contain;
-  background-position: center center;
 }
 
 .hover-bg {
   opacity: 0;
 }
 
-.webcon-img:hover .hover-bg {
+.webcon:hover .hover-bg {
   opacity: 1;
   width: 100%;
   height: 100%;
@@ -652,7 +652,7 @@ nav {
   transition: ease all 0.5s;
 }
 
-.webcon-img:hover .bg-wrap h1 {
+.webcon:hover .bg-wrap h1 {
   color: #fff;
   font-size: 30px;
   text-align: center;
@@ -662,11 +662,11 @@ nav {
   cursor: pointer;
 }
 
-.webcon-img:hover .img-btn {
+.webcon:hover .img-btn {
   display: block;
 }
 
-.webcon-img:hover .img-btn p {
+.webcon:hover .img-btn p {
   cursor: pointer;
   padding: 10px 30px;
   border: 1px solid #fff;
@@ -676,9 +676,12 @@ nav {
   margin: 10px;
 }
 
-.active1 {
+/* .active1 {}
+
+.list-btn h1:first-child a.active1 {
   display: block;
-}
+  color: #222;
+} */
 
 /*팝업*/
 .web-portfolio_popup {
@@ -1023,7 +1026,7 @@ button:hover {
   margin: 0 auto;
 }
 
-.section5 > .title {
+.section5>.title {
   color: #fff;
 }
 
@@ -1033,12 +1036,12 @@ button:hover {
   text-align: center;
 }
 
-.section5 > .snsbar {
+.section5>.snsbar {
   margin: 0 auto;
   text-align: center;
 }
 
-.section5 > .snsbar a i {
+.section5>.snsbar a i {
   color: #fff;
   width: 100%;
   font-size: 30px;
@@ -1065,8 +1068,7 @@ button:hover {
 }
 
 /*미디어쿼리*/
-@media (max-width: 1600px) {
-}
+@media (max-width: 1600px) {}
 
 /* 화면 너비 0~960px _태블릿*/
 @media (max-width: 1260px) {
@@ -1091,15 +1093,14 @@ button:hover {
     font-size: 60px;
   }
 
-  .snsbar > a > i {
+  .snsbar>a>i {
     font-size: 40px;
   }
 
   /*section1*/
 
   #section1 {
-    background: url(../img/sec01-center2.png) black top 100px left 0 fixed
-      no-repeat;
+    background: url(../img/sec01-center2.png) black top 100px left 0 fixed no-repeat;
     background-size: cover;
     background-position: center center;
   }
@@ -1138,8 +1139,7 @@ button:hover {
     background: none;
   }
 
-  .sec02-intro {
-  }
+  .sec02-intro {}
 
   .sec02-intro div h3 {
     font-size: 23px;
@@ -1278,7 +1278,7 @@ button:hover {
     padding: 0;
   }
 
-  .webcon-img {
+  .webcon {
     width: 97%;
   }
 
@@ -1327,11 +1327,11 @@ button:hover {
     font-size: 50px;
   }
 
-  .snsbar > a > i {
+  .snsbar>a>i {
     font-size: 30px;
   }
 
-  .webcon-img {
+  .webcon {
     width: 96%;
   }
 
@@ -1358,7 +1358,7 @@ button:hover {
     font-size: 35px;
   }
 
-  .snsbar > a > i {
+  .snsbar>a>i {
     font-size: 20px;
   }
 
@@ -1418,7 +1418,7 @@ button:hover {
     height: 300px;
   }
 
-  .webcon-img {
+  .webcon {
     width: 340px;
     height: 280px;
   }
@@ -1448,7 +1448,7 @@ button:hover {
     height: 270px;
   }
 
-  .webcon-img {
+  .webcon {
     width: 94%;
     height: 250px;
   }

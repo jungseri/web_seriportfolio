@@ -18,17 +18,47 @@ $(document).ready(function () {
   webpanel.hide();
   $("#work01").show();
 
+  $(".btn1").hover(function () {
+    $("#work02").hide();
+    $("#work03").hide();
+    $("#work01").stop().fadeIn();
+    webAnchor.removeClass("hovers");
+    $(this).addClass("hovers");
+  });
+
+  $(".btn2").hover(function () {
+    $("#work01").hide();
+    $("#work03").hide();
+    $("#work02").stop().fadeIn();
+    webAnchor.removeClass("hovers");
+    $(this).addClass("hovers");
+  });
+
+  $(".btn3").hover(function () {
+    $("#work01").hide();
+    $("#work02").hide();
+    $("#work03").stop().fadeIn();
+    webAnchor.removeClass("hovers");
+    $(this).addClass("hovers");
+  });
   webAnchor.click(function (e) {
     e.preventDefault();
 
     webAnchor.removeClass("active1");
+    webAnchor.removeClass("hovers");
     $(this).addClass("active1");
+    $(this).addClass("hovers");
 
     webpanel.hide();
     var $targets = $(this).attr("href");
     console.log($targets);
     $($targets).show();
+
+
+
+
   });
+
 
   /*팝업*/
   $(".webcon1").click(function () {
@@ -116,6 +146,5 @@ $(document).ready(function () {
     }
   });
 
-  
-  });
- 
+
+});
