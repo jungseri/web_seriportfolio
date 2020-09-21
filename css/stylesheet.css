@@ -300,6 +300,45 @@ nav {
 .sec01-txtbox {
   margin: 10% 50%;
   width: 600px;
+}
+
+@keyframes up {
+  0% {
+    transform: translateY(100px);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
+}
+
+.sec01-txtbox div {
+  overflow: hidden;
+}
+
+.sec01-txtbox div h1 {
+  font-size: 75px;
+}
+
+.sec01-txtbox div h1:first-child {
+  animation-name: up;
+  animation-duration: 0.8s;
+}
+
+.sec01-txtbox div h1:last-child {
+  animation-name: up;
+  animation-duration: 1s;
+}
+
+.sec01-txtbox h3.typing-txt {
+  font-size: 30px;
+  display: none;
+}
+
+h3.typing {
+  /*       position: absolute;*/
+  display: inline-block;
+  animation-name: cursor;
   animation-duration: 0.3s;
   animation-iteration-count: infinite;
 }
@@ -318,16 +357,6 @@ nav {
   }
 }
 
-.sec01-txtbox div h1 {
-  font-size: 75px;
-}
-
-.sec01-txtbox h3 {
-  line-height: 70px;
-  font-size: 30px;
-  margin: 2px;
-}
-
 /*section2*/
 #section2 {
   background: none;
@@ -340,7 +369,7 @@ nav {
 /*소개*/
 .sec02-txtbox {
   text-align: center;
-  padding: 3% 0;
+  padding: 4% 0;
   margin: 0 auto;
 }
 
@@ -359,7 +388,8 @@ nav {
 
 .sec02-career li {
   flex: 1;
-  height: 270px;
+  width: 240px;
+  height: 260px;
   position: relative;
 }
 
@@ -375,6 +405,8 @@ nav {
 
 .sec02-box {
   padding: 15px;
+  width: 240px;
+  height: 260px;
 }
 
 .sec02-box>.txtbox {
@@ -390,7 +422,6 @@ nav {
 }
 
 .sec02-box>.txtbox>p {
-  /* line-height: 36px; */
   text-align: right;
   flex: 2;
   font-size: 16px;
@@ -427,6 +458,7 @@ nav {
   background: #fff;
 }
 
+/*programs*/
 .sec02-contentbox {
   display: flex;
   height: 90px;
@@ -463,20 +495,27 @@ nav {
   z-index: -1;
 }
 
+.programswrap {
+  width: 800px;
+  margin-left: 20px;
+  overflow: hidden;
+}
+
 .programs {
   display: flex;
-  width: 900px;
-  height: 100px;
-  margin-left: 15px;
+  width: 950px;
+  height: 80px;
+  overflow: hidden;
+  margin: 1.2% 0;
 }
 
 .programs li {
   flex: 1;
-  /* border: #555 solid 1px; */
   margin: 0 2%;
   background-size: contain;
   background-position: center;
 }
+
 
 .program1 {
   background: url(../img/program1.png) no-repeat;
@@ -594,12 +633,12 @@ nav {
 
 } */
 
-
 .list-content {
   width: 460px;
   height: 400px;
   position: relative;
 }
+
 
 /*배경삽입*/
 
@@ -622,17 +661,17 @@ nav {
 }
 
 .tab1img {
-  background: url(../img/portfoliosite2.png)#222 center center no-repeat;
+  background: url(../img/portfoliosite2.png) #222 center center no-repeat;
   background-size: contain;
 }
 
 .tab2img {
-  background: url(../img/sec03-visualdesign2.jpg)#222 center center no-repeat;
+  background: url(../img/sec03-visualdesign2.jpg) #222 center center no-repeat;
   background-size: contain;
 }
 
 .tab3img {
-  background: url(../img/sec03-ProductDesign.jfif)#222 center center no-repeat;
+  background: url(../img/sec03-ProductDesign.jfif) #222 center center no-repeat;
   background-size: contain;
 }
 
@@ -683,24 +722,26 @@ nav {
   color: #222;
 } */
 
-/*팝업*/
-.web-portfolio_popup {
-  z-index: 9990;
-}
 
-.web-portfolio_popup .popup {
-  width: 900px;
-  height: 510px;
-  /* border: 5px solid black; */
-  /* background: url(../img/popup01.png);
-  background-size: cover; */
-  /* background: #ffffff; */
-  /* z-index: 9999; */
-  position: relative;
+/*팝업*/
+.dim {
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 999;
+
 }
 
 .popup {
+  width: 1000px;
+  height: 510px;
+  background: #fff;
+  border: 2px solid;
   display: none;
+  position: relative;
 }
 
 .close {
@@ -720,16 +761,16 @@ nav {
 }
 
 .popup-img {
-  width: 37%;
-  height: 485px;
+  width: 40%;
+  height: 100%;
+  border-right: 2px solid black;
   background: url(../img/yes24movie.svg) no-repeat 0 -15px;
   background-size: cover;
-  border: 5px solid black;
   z-index: 10;
 }
 
 .popup-content {
-  width: 70%;
+  width: 60%;
   margin-top: 20px;
   z-index: 10;
   padding: 2% 3%;
@@ -771,6 +812,10 @@ nav {
 }
 
 /*버튼*/
+.popupbtn2 {
+  margin-right: 20px;
+}
+
 .popup-btnwrap {
   display: flex;
   position: absolute;
@@ -783,7 +828,7 @@ nav {
 }
 
 .buttonOverlay {
-  width: 120px;
+  width: 185px;
   text-align: center;
   padding: 12px 24px;
   position: relative;
@@ -1203,57 +1248,69 @@ button:hover {
   }
 
   /*section2*/
-  #section2 {
-    background: none;
-  }
-
-  .sec02-intro {
-    flex-direction: column-reverse;
-    text-align: center;
-    margin: 0 auto;
-    width: 420px;
-    padding: 0;
-  }
-
-  .sec02-intro li {
-    width: 416px;
-  }
-
   .sec02-txtbox {
-    padding: 6% 0;
+    padding-top: 4%;
+    padding-bottom: 0;
   }
 
-  .sec02-txtbox h3 {
-    font-size: 16px;
-    padding: 0;
-    margin: 0;
-    line-height: 30px;
+  .sec02-career {
+    display: flex;
+    flex-flow: row wrap;
+    flex-direction: nowrap;
+    width: 800px;
   }
 
-  .subtitle {
-    display: block;
-    width: 150px;
-    margin: 0 auto;
-    text-align: center;
-    font-size: 15px;
+  .sec02-career li {
+
+    flex: none;
+    width: 250px;
+    height: 230px;
+    margin: 40px 20px;
+
   }
 
-  .sec02-img {
-    margin: 10px auto;
-    width: 300px;
-    height: 400px;
-    background: url(../img/Career2.png) no-repeat;
-    background-size: contain;
+  .sec02-box {
+    border: black solid 2px;
+    background: #fff;
   }
 
-  .introboximg {
-    margin-top: 20px;
+
+  .bg-career {
+    height: 350px;
+    top: 43%;
   }
 
-  .st2 {
-    width: 150px;
-    margin-bottom: 20px;
+  .sec02-contentbox {
+    width: 690px;
   }
+
+  .programswrap {
+    width: 450px;
+    overflow: hidden;
+    margin-left: 15px;
+  }
+
+  .programs li {
+    width: 50px;
+    margin: 0 0.5%;
+    animation-name: flow;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    transform: translateX(600px);
+    /* border: #555 solid 1px; */
+  }
+
+  @keyframes flow {
+    0% {
+      transform: translateX(600px);
+    }
+
+    100% {
+      transform: translateX(-600px);
+    }
+  }
+
 
   /*section3*/
   .list-btn {
@@ -1265,7 +1322,7 @@ button:hover {
   }
 
   .list-content {
-    width: 90%;
+    width: 500px;
     flex: none;
     margin: 0 auto;
   }
@@ -1284,6 +1341,37 @@ button:hover {
 
   .imgframe2 {
     width: 97%;
+  }
+
+  .popup {
+    width: 500px;
+    height: 810px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  .popupwrap {
+    position: relative;
+    display: block;
+    height: 500px;
+  }
+
+  .popup-img {
+    width: 100%;
+    height: 60%;
+    border-bottom: 2px solid black;
+    border-right: none;
+  }
+
+  .popup-content {
+    width: 100%;
+  }
+
+  .popup-btnwrap {
+    top: 142%;
+    left: 9%;
   }
 
   /*section4*/
@@ -1317,6 +1405,92 @@ button:hover {
   }
 }
 
+/*화면너비 0~800px*/
+@media (max-width: 800px) {
+  .sec02-txtbox h3 {
+    font-size: 18px;
+    white-space: pre-line;
+  }
+
+  .sec02-career {
+    display: block;
+    width: 410px;
+    margin: 0 auto;
+    flex-flow: none;
+    flex-direction: none;
+
+  }
+
+  .br {
+    display: none;
+  }
+
+  .sec02-career li {
+    margin: 20px auto;
+    width: 400px;
+    height: 195px;
+  }
+
+  .sec02-box {
+    display: block;
+    width: 400px;
+    height: 195px;
+
+  }
+
+  .imgframe {
+    width: 400px;
+    height: 195px;
+  }
+
+  .sec02-contentbox {
+    width: 450px;
+    margin: 30px auto;
+  }
+
+  .programswrap {
+    width: 190px;
+    height: 90px;
+    overflow: hidden;
+    margin-left: 15px;
+    margin-top: 10px;
+  }
+
+  .bg-career {
+    height: 800px;
+    top: 30%;
+  }
+
+  .sec02-title {
+    position: relative;
+    width: 105px;
+    height: 76px;
+    margin-left: 25px;
+    display: inline-block;
+  }
+
+  .sec02-title h3 {
+    font-size: 14px;
+    width: 106px;
+    height: 77px;
+  }
+
+  .titleframe {
+    width: 106px;
+    height: 78px;
+  }
+
+
+  .programs {
+    width: 600px;
+    height: 60px;
+  }
+
+  .programs li {
+    width: 30px;
+  }
+}
+
 /*화면너비 0~600px*/
 @media (max-width: 600px) {
   .menubar-slide ul li {
@@ -1338,10 +1512,69 @@ button:hover {
   .imgframe2 {
     width: 96%;
   }
+
+  /*section2*/
+  .sec02-career {
+    width: 313px;
+  }
+
+  .sec02-career li {
+    margin-bottom: 40px;
+  }
+
+  .sec02-box {
+    width: 300px;
+    height: 210px;
+  }
+
+  .imgframe {
+    width: 300px;
+    height: 210px;
+  }
+
+  .popup-content h3 {
+    font-size: 15px;
+  }
+
+  .popup-content p {
+    font-size: 12px;
+  }
+
+  .popup2-txtbox2 {
+    font-size: 12px;
+  }
+
+  .programswrap {
+    width: 230px;
+    height: 90px;
+    overflow: hidden;
+    margin-left: 15px;
+    margin-top: 10px;
+  }
+
+  .bg-career {
+    height: 800px;
+    top: 30%;
+  }
+
+  .popup {
+    width: 400px;
+    height: 760px;
+  }
+
+  .popup-btnwrap {
+    top: 135%;
+    left: 7%;
+  }
+
+  .buttonOverlay {
+    width: 150px;
+    font-size: 12px;
+  }
 }
 
 /*화면너비 0~480px*/
-@media (max-width: 480px) {
+@media (max-width: 500px) {
   .title {
     font-size: 31px;
   }
@@ -1419,12 +1652,12 @@ button:hover {
   }
 
   .webcon {
-    width: 340px;
+    width: 350px;
     height: 280px;
   }
 
   .imgframe2 {
-    width: 340px;
+    width: 350px;
     height: 280px;
   }
 
@@ -1443,10 +1676,10 @@ button:hover {
 
 /*화면너비 0~360px*/
 @media (max-width: 360px) {
-  .list-content {
+  /* .list-content {
     width: 90%;
     height: 270px;
-  }
+  } */
 
   .webcon {
     width: 94%;

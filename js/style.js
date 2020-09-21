@@ -53,30 +53,36 @@ $(document).ready(function () {
     var $targets = $(this).attr("href");
     console.log($targets);
     $($targets).show();
-
-
-
-
   });
-
 
   /*팝업*/
-  $(".webcon1").click(function () {
+  $(".dim").hide();
+  $(".webcon1").click(function (e) {
+    e.preventDefault();
     $(".popup1").show();
+    $(".dim").show();
   });
-  $(".close").click(function () {
+  $(".close").click(function (e) {
+    e.preventDefault();
     $(".popup1").hide();
+    $("#section3").show();
+    $(".dim").hide();
   });
-  $(".webcon2").click(function () {
+  $(".webcon2").click(function (e) {
+    e.preventDefault();
     $(".popup2").show();
+    $(".dim").show();
   });
-  $(".close").click(function () {
+  $(".close").click(function (e) {
+    e.preventDefault();
     $(".popup2").hide();
+    $("#section3").show();
+    $(".dim").hide();
   });
   /*슬라이드*/
   $(".lightgallery").lightGallery();
 
-  const config = {
+  const sec04slide = {
     type: "carousel",
     perView: 3,
     // focusAt: "center",
@@ -94,9 +100,9 @@ $(document).ready(function () {
     },
   };
 
-  new Glide(".slide1", config).mount();
+  new Glide(".slide1", sec04slide).mount();
 
-  new Glide(".slide2", config).mount();
+  new Glide(".slide2", sec04slide).mount();
   /*탭버튼*/
   var tabAnchor = $(".tabs-nav li a"),
     tabpanel = $(".glide__slides");
@@ -146,5 +152,22 @@ $(document).ready(function () {
     }
   });
 
+  var typingBool = false;
+  var typingIdx = 0;
+  var typingTxt = $(".typing-txt").text();
+  typingTxt = typingTxt.split("");
+  if (typingBool == false) {
+    typingBool = true;
 
+    var tyInt = setInterval(typing, 100);
+  }
+
+  function typing() {
+    if (typingIdx < typingTxt.length) {
+      $(".typing").append(typingTxt[typingIdx]);
+      typingIdx++;
+    } else {
+      clearInterval(tyInt);
+    }
+  }
 });
