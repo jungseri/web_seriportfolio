@@ -119,7 +119,7 @@ $(document).ready(function () {
     tabpanel = $(".glide__slides");
 
   tabpanel.hide();
-  $("#productD-slide").show();
+  $("#visualD-slide").show();
 
   $(".tabs-nav>li>a.visualbtn").click(function () {
     $(".tabs-nav").addClass("pb100");
