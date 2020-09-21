@@ -292,7 +292,7 @@ nav {
 
 /*section1*/
 #section1 {
-  background: url(../img/sec01bg.png) black top 0 left 0 fixed no-repeat;
+  background: url(../img/sec01bgimg.png) black top 0 left 0 fixed no-repeat;
   background-size: cover;
   background-position: center center;
 }
@@ -1176,9 +1176,14 @@ button:hover {
   /*section1*/
 
   #section1 {
-    background: url(../img/sec01-center2.png) black top 100px left 0 fixed no-repeat;
+    background: url(../img/sec01bgcenter.png) black top 100px left 0 fixed no-repeat;
     background-size: cover;
     background-position: center center;
+
+  }
+
+  .emoticon1 {
+    display: none;
   }
 
   .sec01-wrap {
