@@ -79,6 +79,17 @@ $(document).ready(function () {
     $("#section3").show();
     $(".dim").hide();
   });
+  $(".webcon3").click(function (e) {
+    e.preventDefault();
+    $(".popup3").show();
+    $(".dim").show();
+  });
+  $(".close").click(function (e) {
+    e.preventDefault();
+    $(".popup3").hide();
+    $("#section3").show();
+    $(".dim").hide();
+  });
   /*슬라이드*/
   $(".lightgallery").lightGallery();
 
@@ -109,6 +120,10 @@ $(document).ready(function () {
 
   tabpanel.hide();
   $("#productD-slide").show();
+
+  $(".tabs-nav>li>a.visualbtn").click(function () {
+    $(".tabs-nav").addClass("pb100");
+  });
 
   tabAnchor.click(function (e) {
     e.preventDefault();

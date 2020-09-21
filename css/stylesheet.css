@@ -292,7 +292,7 @@ nav {
 
 /*section1*/
 #section1 {
-  background: url(../img/sec01-bg.png) black top 0 left 0 fixed no-repeat;
+  background: url(../img/sec01bg.png) black top 0 left 0 fixed no-repeat;
   background-size: cover;
   background-position: center center;
 }
@@ -661,18 +661,18 @@ h3.typing {
 }
 
 .tab1img {
-  background: url(../img/portfoliosite2.png) #222 center center no-repeat;
-  background-size: contain;
+  background: url(../img/portfolosite-img.png) #222 center center no-repeat;
+  background-size: cover;
 }
 
 .tab2img {
-  background: url(../img/sec03-visualdesign2.jpg) #222 center center no-repeat;
-  background-size: contain;
+  background: url(../img/movieapp.png) #eaebea center 10px no-repeat;
+  background-size: cover;
 }
 
 .tab3img {
-  background: url(../img/sec03-ProductDesign.jfif) #222 center center no-repeat;
-  background-size: contain;
+  background: url(../img/makestand.png) center center no-repeat;
+  background-size: cover;
 }
 
 .hover-bg {
@@ -744,6 +744,7 @@ h3.typing {
   position: relative;
 }
 
+
 .close {
   border: none;
   background: none;
@@ -757,16 +758,29 @@ h3.typing {
 .popupwrap {
   position: relative;
   display: flex;
-  height: 500px;
+  height: 100%;
 }
 
 .popup-img {
   width: 40%;
   height: 100%;
   border-right: 2px solid black;
-  background: url(../img/yes24movie.svg) no-repeat 0 -15px;
-  background-size: cover;
   z-index: 10;
+}
+
+.popup1 .popupwrap .popup-img {
+  background: url(../img/portfolosite-img.png)#222 no-repeat -80px 0px;
+  background-size: cover;
+}
+
+.popup2 .popupwrap .popup-img {
+  background: url(../img/movieapp.png)#222 no-repeat -60px 0px;
+  background-size: cover;
+}
+
+.popup3 .popupwrap .popup-img {
+  background: url(../img/makestand.png)#222 no-repeat -145px 0px;
+  background-size: cover;
 }
 
 .popup-content {
@@ -996,6 +1010,7 @@ h3.typing {
 .slide2 {
   width: 1000px;
   margin: 0 auto;
+
 }
 
 .gs-wrap a {
@@ -1004,7 +1019,9 @@ h3.typing {
 
 .gs-wrap a img {
   width: 300px;
+  height: 208px;
   border: 2.5px solid black;
+  background: #aaa;
 }
 
 .bg-box {
@@ -1036,15 +1053,22 @@ button:hover {
   transition: ease all 0.5s;
 }
 
+#productD-slide {
+  /* margin-top: 80px; */
+}
+
+#visualD-slide {
+  /* height: 400px; */
+  /* margin-top: 80px; */
+}
+
+.pb100 {
+  padding-bottom: 100px;
+}
+
 .slide1 .glide__arrow--left {
   position: absolute;
   top: 45%;
-  left: 0;
-}
-
-.slide2 .glide__arrow--left {
-  position: absolute;
-  top: 40%;
   left: 0;
 }
 
@@ -1054,9 +1078,16 @@ button:hover {
   right: 0;
 }
 
+.slide2 .glide__arrow--left {
+  position: absolute;
+  top: 18%;
+  left: 0;
+}
+
+
 .slide2 .glide__arrow--right {
   position: absolute;
-  top: 40%;
+  top: 18%;
   right: 0;
 }
 
@@ -1230,7 +1261,8 @@ button:hover {
   .sec01-txtbox div {
     margin: 0 auto;
     text-align: center;
-    width: 470px;
+    width: 100%;
+    display: inline-block;
   }
 
   .sec01-txtbox div h1 {
@@ -1239,6 +1271,9 @@ button:hover {
 
   .sec01-txtbox h3 {
     font-size: 20px;
+    display: inline;
+    margin: 0 auto;
+    padding: 0 2%;
   }
 
   .web-portfolio {
@@ -1249,6 +1284,11 @@ button:hover {
 
   /*section2*/
   .sec02-txtbox {
+    padding-top: 4%;
+    padding-bottom: 0;
+  }
+
+  .sec02-txtbox h3 {
     padding-top: 4%;
     padding-bottom: 0;
   }
@@ -1407,6 +1447,27 @@ button:hover {
 
 /*화면너비 0~800px*/
 @media (max-width: 800px) {
+  .sec01-txtbox {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    margin-top: 50px;
+  }
+
+  .sec01-txtbox h3 {
+    font-size: 10px;
+  }
+
+  .sec01-txtbox div h1 {
+    font-size: 55px;
+  }
+
+  .sec01-txtbox h3 {
+    display: inline;
+    font-size: 18px;
+    padding-right: 35px;
+  }
+
   .sec02-txtbox h3 {
     font-size: 18px;
     white-space: pre-line;
@@ -1493,6 +1554,15 @@ button:hover {
 
 /*화면너비 0~600px*/
 @media (max-width: 600px) {
+
+  .sec01-txtbox div h1 {
+    font-size: 55px;
+  }
+
+  .sec01-txtbox h3 {
+    font-size: 18px;
+  }
+
   .menubar-slide ul li {
     padding: 2% 0;
   }
@@ -1575,6 +1645,8 @@ button:hover {
 
 /*화면너비 0~480px*/
 @media (max-width: 500px) {
+
+
   .title {
     font-size: 31px;
   }
@@ -1619,13 +1691,14 @@ button:hover {
     width: 300px;
   }
 
-  .sec02-txtbox {
-    margin: 0 auto;
+  .sec01-txtbox div h1 {
+    width: 100%;
+    margin: 0;
+    padding: 0;
   }
 
-  .sec02-txtbox h3 {
-    font-size: 16px;
-    line-height: 30px;
+  .sec01-txtbox h3 {
+    font-size: 12px;
   }
 
   .programs {
