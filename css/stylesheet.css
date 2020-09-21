@@ -1176,7 +1176,8 @@ button:hover {
   /*section1*/
 
   #section1 {
-    background: url(../img/sec01bgcenter.png) black top 100px left 0 fixed no-repeat;
+    /* background: url(../img/sec01bgcenter.png) black top 100px left 0 fixed no-repeat; */
+    background: url(../img/sec01bgcenter.jpg) black top 100px left 0 fixed no-repeat;
     background-size: cover;
     background-position: center center;
 
